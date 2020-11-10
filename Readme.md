@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Олег Селин](https://up.htmlacademy.ru/adaptive/21/user/264575).
-* Наставник: `Неизвестно`.
+* Наставник: Вадим Канинский.
 
 ---
 
