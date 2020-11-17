@@ -1,0 +1,21 @@
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.contacts-title {
+  font-family: $title-font;
+  font-weight: 400;
+  line-height: 1.125;
+  text-transform: uppercase;
+  color: #111111;
+}
+
+.contacts__text {
+  margin: 0;
+  font-family: $basic-font;
+  font-size: 0.875em;
+  color: $special-dark;
+  line-height: 1.425;
+}

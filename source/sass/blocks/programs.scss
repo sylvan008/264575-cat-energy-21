@@ -1,0 +1,42 @@
+.programs {
+  font-family: $basic-font;
+}
+
+.programs__wrapper {
+  @include wrapper-x-padding();
+}
+
+.programs__list {
+  @include reset-list;
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+.programs-item {
+  padding: 17px 20px;
+  background-color: $basic-grey;
+}
+
+.programs-item__title {
+  margin-top: 13px;
+  margin-bottom: 29px;
+  font-family: $title-font;
+  font-size: 1.5em;
+}
+
+.programs-item__description {
+  margin: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: 0.875em;
+  color: $special-dark;
+}
+
+.programs-item__link {
+  display: inline-flex;
+  margin-top: 19px;
+  font-family: $title-font;
+  font-size: 1em;
+  text-decoration: none;
+  color: currentColor;
+}

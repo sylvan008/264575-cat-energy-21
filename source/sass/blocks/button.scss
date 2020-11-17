@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $title-font;
+  background-color: $base-accent;
+  color: $basic-white;
+}

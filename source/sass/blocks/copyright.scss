@@ -1,0 +1,11 @@
+.copyright {
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $basic-font;
+    line-height: 1.15;
+    text-decoration: none;
+    color: $special-dark;
+  }
+}
