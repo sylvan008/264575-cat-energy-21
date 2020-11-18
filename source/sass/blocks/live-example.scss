@@ -12,12 +12,14 @@
   margin-top: 2px;
   margin-bottom: 33px;
   font-family: $title-font;
-  font-size: 2em;
+  font-size: 2.25em;
+  line-height: 1.11;
 }
 
 .live-example__description {
   margin-bottom: 25px;
   font-size: 0.875em;
+  line-height: 1.285;
   font-family: $basic-font;
   color: $special-dark;
 }
@@ -27,6 +29,7 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 31px;
   grid-row-gap: 25px;
+  line-height: 1;
 }
 
 .live-example__result-item {
@@ -37,7 +40,7 @@
   dd {
     margin: 0;
     font-family: $basic-font;
-    font-size: 0.875em;
+    font-size: 0.75em;
     color: $special-dark;
   }
 
@@ -47,19 +50,22 @@
     flex-direction: row-reverse;
     justify-content: flex-end;
     text-transform: uppercase;
+    line-height: 1.425;
+
+    dt {
+      font-family: $title-font;
+      font-size: 0.875em;
+    }
 
     dd {
       font-family: $title-font;
+      font-size: 0.875em;
       color: currentColor;
 
       &::after {
         content: ":";
         margin-right: 0.15em;
       }
-    }
-
-    dt {
-      font-family: $title-font;
     }
   }
 }

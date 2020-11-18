@@ -22,6 +22,7 @@
   margin-bottom: 29px;
   font-family: $title-font;
   font-size: 1.5em;
+  line-height: 1.545;
 }
 
 .programs-item__description {
@@ -29,6 +30,7 @@
   padding-bottom: 23px;
   border-bottom: 1px solid #d9d9d9;
   font-size: 0.875em;
+  line-height: 1.285;
   color: $special-dark;
 }
 
@@ -37,6 +39,7 @@
   margin-top: 19px;
   font-family: $title-font;
   font-size: 1em;
+  line-height: 1;
   text-decoration: none;
   color: currentColor;
 }
