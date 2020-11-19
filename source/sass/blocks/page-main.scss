@@ -4,3 +4,7 @@
   line-height: 1;
   font-weight: 400;
 }
+
+.page-main__wrapper {
+  @include wrapper-x-padding();
+}

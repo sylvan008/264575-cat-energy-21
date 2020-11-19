@@ -1,0 +1,21 @@
+.show-more {
+  border-bottom: 1px solid $border-lightest;
+}
+
+.show-more__legend {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.25;
+  color: #111111;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.show-more__text {
+  font-family: $basic-font;
+  font-size: 0.777em;
+  line-height: 1.29;
+  text-align: center;
+  color: $special-dark;
+}
