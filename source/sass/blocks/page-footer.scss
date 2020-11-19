@@ -1,0 +1,25 @@
+.page-footer__bottom-wrapper {
+  @include wrapper-x-padding();
+}
+
+.page-footer__logo {
+  padding-top: 39px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $border-light;
+  text-align: center;
+}
+
+.page-footer__contacts {
+  padding: 28px 18px 22px 18px;
+}
+
+.page-footer__social {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $border-light;
+}
+
+.page-footer__copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

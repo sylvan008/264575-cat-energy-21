@@ -1,0 +1,6 @@
+.social__list {
+  @include reset-list;
+  display: grid;
+  grid-column-gap: 33px;
+  align-content: center;
+}

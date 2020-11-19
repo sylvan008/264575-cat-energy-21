@@ -1,0 +1,26 @@
+.cats-comparison {
+  font-family: $title-font;
+  font-size: 1em;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.cats-comparison__slider {
+  position: relative;
+  height: 240px;
+}
+
+.cats-comparison__cat-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--before {
+    z-index: 1;
+  }
+
+  &--after {
+    z-index: 2;
+  }
+}

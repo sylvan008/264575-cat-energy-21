@@ -1,1 +1,21 @@
-// Начните писать стили здесь
+@import "global/fonts";
+// Variables
+@import "global/variables";
+// Mixins
+@import "mixins/reset-list";
+@import "mixins/wrapper-padding";
+// Blocks
+@import "blocks/visually-hidden";
+@import "blocks/button";
+@import "blocks/page";
+@import "blocks/page-header";
+@import "blocks/page-footer";
+@import "blocks/main-nav";
+@import "blocks/promo";
+@import "blocks/programs";
+@import "blocks/how-works";
+@import "blocks/live-example";
+@import "blocks/cats-comparison";
+@import "blocks/contacts";
+@import "blocks/social";
+@import "blocks/copyright";

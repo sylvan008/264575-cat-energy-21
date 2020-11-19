@@ -1,0 +1,37 @@
+.promo {
+  background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) 0 0 / 100% 302px no-repeat;
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.promo__title {
+  margin-top: 27px;
+  margin-bottom: 25px;
+  font-family: $title-font;
+  font-size: 2em;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: $basic-white;
+}
+
+.promo__slogan {
+  margin-top: 0;
+  margin-bottom: 29px;
+  font-size: 0.875em;
+  font-family: $title-font;
+  line-height: 1;
+  text-align: center;
+  color: $basic-white;
+}
+
+.promo__button {
+  margin-top: 3px;
+  margin-bottom: 22px;
+}
