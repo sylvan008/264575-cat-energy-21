@@ -12,4 +12,9 @@
   font-family: $title-font;
   background-color: $base-accent;
   color: $basic-white;
+
+  &--light {
+    background-color: $basic-grey;
+    color: $special-dark;
+  }
 }

@@ -1,0 +1,18 @@
+.product-futures {
+  display: grid;
+  font-family: $basic-font;
+  font-weight: 400;
+  font-size: 0.777em;
+  line-height: 1.29;
+  color: $special-dark;
+}
+
+.product-futures__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  dd {
+    margin: 0;
+  }
+}

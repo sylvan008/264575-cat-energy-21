@@ -1,0 +1,22 @@
+.catalog__title {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 2.25em;
+  line-height: 1;
+}
+
+.catalog__list {
+  @include reset-list;
+}
+
+.catalog__item {
+  margin-left: -$wrapper-padding;
+  margin-right: -$wrapper-padding;
+  padding-left: $wrapper-padding;
+  padding-right: $wrapper-padding;
+}
+
+.catalog__additional-goods {
+  margin-top: 28px;
+  margin-bottom: 35px;
+}

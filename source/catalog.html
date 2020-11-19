@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
 <header class="page-header">
   <div class="page-header__wrapper">
-    <div class="page-header__logo">
+    <nav class="page-header__main-nav main-nav main-nav--open">
       <img
         class="page-header__logo-image logo-image"
         src="https://via.placeholder.com/34x38/FFFF00/000000"
@@ -21,20 +22,18 @@
         alt="Cat Energy"
         width="101"
         height="18">
-    </div>
-    <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">открыть меню</span>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="/">Главная</a>
+          <a class="main-nav__link" href="./index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a>Каталог продукции</a>
+          <a class="main-nav__link">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Подбор программы</a>
+          <a class="main-nav__link" href="./form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -68,7 +67,7 @@
               <dd>700 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item catalog-item">
           <img
@@ -92,7 +91,7 @@
               <dd>1000 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item catalog-item">
           <img
@@ -116,7 +115,7 @@
               <dd>700 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item catalog-item">
           <img
@@ -140,7 +139,7 @@
               <dd>1000 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item catalog-item">
           <img
@@ -164,7 +163,7 @@
               <dd>400 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item catalog-item">
           <img
@@ -188,7 +187,7 @@
               <dd>700 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="catalog__item catalog-item">
           <img
@@ -212,7 +211,7 @@
               <dd>500 Р.</dd>
             </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
       </ul>
       <div class="catalog__show-more show-more">
@@ -221,47 +220,57 @@
         <button class="button button--light" type="button">показать все</button>
       </div>
     </section>
-    <section class="additional-goods">
+    <section class="catalog__additional-goods additional-goods">
       <h2 class="additional-goods__title">Дополнительные товары</h2>
       <ul class="additional-goods__list">
         <li class="additional-goods__item">
-          <h3 class="additional-goods__title">Сахарозаменитель</h3>
+          <h3 class="additional-goods__caption">Сахарозаменитель</h3>
           <dl class="additional-goods__product-futures product-futures">
-            <dt>1 упаковка (100 г)</dt>
-            <dd>200 Р.</dd>
+            <div class="product-futures__item">
+              <dt>1 упаковка (100 г)</dt>
+              <dd>200 Р.</dd>
+            </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="additional-goods__item">
-          <h3 class="additional-goods__title">питьевая вода</h3>
+          <h3 class="additional-goods__caption">питьевая вода</h3>
           <dl class="additional-goods__product-futures product-futures">
-            <dt>5 литров</dt>
-            <dd>50 Р.</dd>
+            <div class="product-futures__item">
+              <dt>5 литров</dt>
+              <dd>50 Р.</dd>
+            </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="additional-goods__item">
-          <h3 class="additional-goods__title">молоко</h3>
+          <h3 class="additional-goods__caption">молоко</h3>
           <dl class="additional-goods__product-futures product-futures">
-            <dt>1 литр</dt>
-            <dd>100 Р.</dd>
+            <div class="product-futures__item">
+              <dt>1 литр</dt>
+              <dd>100 Р.</dd>
+            </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
         <li class="additional-goods__item">
-          <h3 class="additional-goods__title">витамины</h3>
+          <h3 class="additional-goods__caption">витамины</h3>
           <dl class="additional-goods__product-futures product-futures">
-            <dt>1 упаковка (30 г)</dt>
-            <dd>300 Р.</dd>
+            <div class="product-futures__item">
+              <dt>1 упаковка (30 г)</dt>
+              <dd>300 Р.</dd>
+            </div>
           </dl>
-          <button class="button" type="button">Заказать</button>
+          <button class="catalog-item__button button" type="button">Заказать</button>
         </li>
       </ul>
-      <p class="additional-goods__promo">Закажите все и получите чехол для кота в подарок!</p>
+      <p class="additional-goods__promo">
+        <span>Закажите все и получите чехол для кота в подарок!</span>
+      </p>
     </section>
   </div>
 </main>
-<footer class="page-footer">
+<footer class="page-footer page-footer--background">
   <div class="page-footer__top-wrapper">
     <div class="page-footer__contacts contacts">
       <b class="contacts-title">Приглашаем к сотрудничеству дилеров!</b>
