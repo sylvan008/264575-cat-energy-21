@@ -1,0 +1,19 @@
+.program-page {
+  max-width: 320px;
+}
+
+.program-page__wrapper {
+  @include wrapper-x-padding();
+}
+
+.program-page__description {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.285;
+  text-transform: uppercase;
+}
+
+.program-page__form {
+  margin-top: 12px;
+}

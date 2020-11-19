@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
 <header class="page-header">
   <div class="page-header__wrapper">
-    <div class="page-header__logo">
+    <nav class="page-header__main-nav main-nav main-nav--open">
       <img
         class="page-header__logo-image logo-image"
         src="https://via.placeholder.com/34x38/FFFF00/000000"
@@ -21,98 +22,108 @@
         alt="Cat Energy"
         width="101"
         height="18">
-    </div>
-    <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">открыть меню</span>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="/">Главная</a>
+          <a class="main-nav__link" href="./index.html">Главная</a>
         </li>
         <li class="main-nav__item">
-          <a>Каталог продукции</a>
+          <a class="main-nav__link" href="./catalog.html">Каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="#">Подбор программы</a>
+          <a class="main-nav__link">Подбор программы</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
 <main class="page-main program-page">
-  <h1 class="page-main__title">Подбор программы</h1>
-  <p class="program-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+  <div class="program-page__wrapper">
+    <h1 class="page-main__title">Подбор программы</h1>
+    <p class="program-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+  </div>
   <form class="program-page__form program" action="https://echo.htmlacademy.ru">
-    <fieldset class="program__cat-params">
+    <fieldset class="program__fieldset program__cat-params">
       <legend class="visually-hidden">Параметры кота</legend>
-      <label class="program__label input-group">
-        Имя:*
-        <input type="text" placeholder="БАРСИК" name="cat_name" required>
-      </label>
-      <label class="program__label input-group">
-        Вес (КГ):*
-        <input type="number" min="0" placeholder="7" name="cat_weight" required>
-      </label>
-      <label class="program__label input-group">
-        Возраст (ЛЕТ)
-        <input type="number" min="0" placeholder="7" name="cat_age">
-      </label>
+      <div class="program__group">
+        <label class="program__label input-group">
+          Имя:*
+          <input type="text" placeholder="БАРСИК" name="cat_name" required>
+        </label>
+        <label class="program__label input-group">
+          Вес (КГ):*
+          <input type="number" min="0" placeholder="7" name="cat_weight" required>
+        </label>
+        <label class="program__label input-group">
+          Возраст (ЛЕТ)
+          <input type="number" min="0" placeholder="7" name="cat_age">
+        </label>
+      </div>
     </fieldset>
-    <fieldset class="program__program-type">
+    <fieldset class="program__fieldset program__program-type">
       <legend class="visually-hidden">Тип программы</legend>
-      <label class="program__label input-group">
-        <input type="radio" name="program-type" checked>
-        Похудение
-      </label>
-      <label class="program__label input-group">
-        <input type="radio" name="program-type">
-        Набор массы
-      </label>
-      <label class="program__label input-group">
-        <input type="radio" name="program-type">
-        Не знаю (нужен ваш совет)
-      </label>
+      <div class="program__group">
+        <label class="program__label input-group">
+          <input type="radio" name="program-type" checked>
+          Похудение
+        </label>
+        <label class="program__label input-group">
+          <input type="radio" name="program-type">
+          Набор массы
+        </label>
+        <label class="program__label input-group">
+          <input type="radio" name="program-type">
+          Не знаю (нужен ваш совет)
+        </label>
+      </div>
     </fieldset>
-    <fieldset class="program__owner-contacts">
-      <legend class="program__legend">Контактные данные (владельца кота)</legend>
-      <label class="program__label input-group">
-        mail:*
-        <input type="email" placeholder="kuklachev@gmail.com" name="owner_email" required>
-      </label>
-      <label class="program__label input-group">
-        Телефон:*
-        <input type="tel" placeholder="8 (960) 900-60-90" name="owner_tel" required>
-      </label>
+    <fieldset class="program__fieldset program__owner-contacts">
+      <legend class="program__legend program__legend--owner">Контактные данные<br>(владельца кота)</legend>
+      <div class="program__group">
+        <label class="program__label input-group">
+          mail:*
+          <input type="email" placeholder="kuklachev@gmail.com" name="owner_email" required>
+        </label>
+        <label class="program__label input-group">
+          Телефон:*
+          <input type="tel" placeholder="8 (960) 900-60-90" name="owner_tel" required>
+        </label>
+      </div>
     </fieldset>
-    <fieldset class="program__comment">
+    <fieldset class="program__fieldset program__comment">
       <legend class="program__legend">Комментарий</legend>
-      <textarea name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+      <textarea class="program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
     </fieldset>
-    <fieldset class="program__extra-goods">
+    <fieldset class="program__fieldset program__extra-goods">
       <legend class="program__legend">Дополнительно</legend>
-      <label class="program__label input-group">
-        <input type="checkbox" name="extra_goods" checked>
-        сахарозаменитель
-      </label>
-      <label class="program__label input-group">
-        <input type="checkbox" name="extra_goods">
-        питьевая вода
-      </label>
-      <label class="program__label input-group">
-        <input type="checkbox" name="extra_goods">
-        молоко
-      </label>
-      <label class="program__label input-group">
-        <input type="checkbox" name="extra_goods">
-        витамины
-      </label>
+      <div class="program__group">
+        <label class="program__label input-group">
+          <input type="checkbox" name="extra_goods" checked>
+          сахарозаменитель
+        </label>
+        <label class="program__label input-group">
+          <input type="checkbox" name="extra_goods">
+          питьевая вода
+        </label>
+        <label class="program__label input-group">
+          <input type="checkbox" name="extra_goods">
+          молоко
+        </label>
+        <label class="program__label input-group">
+          <input type="checkbox" name="extra_goods">
+          витамины
+        </label>
+      </div>
     </fieldset>
-    <button class="program__button button" type="submit">Отправить заявку</button>
-    <small class="program__form-legend">* — Обязательные поля</small>
+    <div class="program-page__wrapper">
+      <button class="program__button button" type="submit">Отправить заявку</button>
+      <small class="program__form-legend">* — Обязательные поля</small>
+    </div>
   </form>
 </main>
-<footer class="page-footer">
+<footer class="page-footer page-footer--background">
   <div class="page-footer__top-wrapper">
     <div class="page-footer__contacts contacts">
       <b class="contacts-title">Приглашаем к сотрудничеству дилеров!</b>
