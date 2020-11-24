@@ -2,6 +2,10 @@
   @include wrapper-x-padding();
   padding-top: 1px;
   padding-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    @include wrapper-x-padding(30px);
+  }
 }
 
 .how-works__title {
@@ -17,6 +21,41 @@
   @include reset-list;
   display: grid;
   grid-row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: auto;
+    grid-column-gap: 80px;
+    grid-row-gap: unset;
+  }
+}
+
+.how-works__item {
+  &:nth-child(odd) {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / span 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: unset;
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: $tablet-width) {
+      grid-column: 3 / span 2;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: unset;
+    }
+  }
 }
 
 .how-works__text {

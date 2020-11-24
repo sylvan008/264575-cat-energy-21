@@ -1,4 +1,5 @@
 .cats-comparison {
+  grid-area: slider;
   font-family: $title-font;
   font-size: 1em;
   line-height: 1.25;
@@ -7,14 +8,19 @@
 }
 
 .cats-comparison__slider {
-  position: relative;
-  height: 240px;
+  display: grid;
 }
 
 .cats-comparison__cat-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 700px;
+  }
 
   &--before {
     z-index: 1;
@@ -22,5 +28,16 @@
 
   &--after {
     z-index: 2;
+  }
+}
+
+.cats-comparison__toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.cats-comparison__image-toggle {
+  @media (min-width: $tablet-width) {
+    width: 428px;
   }
 }
