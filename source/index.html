@@ -9,21 +9,22 @@
 <body class="page__body">
 <header class="page-header">
   <div class="page-header__wrapper">
-    <nav class="page-header__main-nav main-nav main-nav--open">
+    <nav class="page-header__main-nav main-nav">
       <img
         class="page-header__logo-image logo-image"
-        src="https://via.placeholder.com/34x38/FFFF00/000000"
+        src="img/logo-mobile.svg"
         alt="Cat Energy суперкот"
         width="34"
         height="38">
       <img
-        class="logo-image"
-        src="https://via.placeholder.com/128x24/?text=CatEnergy"
+        class="logo-image logo-image--hide-tablet"
+        src="img/footer-logo.svg"
         alt="Cat Energy"
         width="101"
         height="18">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">открыть меню</span>
+        <svg width="24" height="18"><path stroke="#000" stroke-width="1.5" d="M0 1.3h24M0 9.3h24M0 17.3h24"/></svg>
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item">
@@ -43,14 +44,16 @@
   <h1 class="visually-hidden">Магазин Cat Energy - функциональное питание для котов и кошек</h1>
   <section class="promo">
     <div class="promo__wrapper">
-      <h2 class="promo__title">Функциональное питание для котов</h2>
+      <h2 class="promo__title">Функциональное <br> питание для котов</h2>
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
-      <img
-        class="promo__image"
-        src="https://via.placeholder.com/280x270/FFFF00/000000?text=PROMO"
-        alt="Корм Cat Energy Pro с курицей"
-        width="280"
-        height="270">
+      <picture class="promo__picture">
+        <source srcset="img/index-can.png" media="(min-width: 1280px)">
+        <source srcset="img/index-can-tablet.png" media="(min-width: 768px)">
+        <img
+          class="promo__image"
+          src="img/index-can-mobile.png"
+          alt="Корм Cat Energy Pro с курицей">
+      </picture>
       <a class="promo__button button" href="#">Подобрать программу</a>
     </div>
   </section>
@@ -122,13 +125,11 @@
           <img
             class="cats-comparison__cat-image cats-comparison__cat-image--before"
             src="https://via.placeholder.com/320x240/ff9d5c/000000?text=CAT"
-            alt="Толстый кот, до прохождения программы"
-            width="280">
+            alt="Толстый кот, до прохождения программы">
           <img
             class="cats-comparison__cat-image cats-comparison__cat-image--after"
             src="https://via.placeholder.com/320x240/ff9d5c/000000?text=CAT"
-            alt="Стройный кот, после прохождения программы"
-            width="280">
+            alt="Стройный кот, после прохождения программы">
         </div>
         <p class="cats-comparison__toggle">
           <label class="visually-hidden" for="toggle-cats">Кот до и после программы</label>
@@ -142,22 +143,30 @@
 </main>
 <footer class="page-footer">
   <div class="page-footer__top-wrapper">
-    <div class="page-footer__contacts contacts">
-      <b class="contacts-title">Приглашаем к сотрудничеству дилеров!</b>
-      <p class="contacts__text">
-        ул. Большая<br>
-        Конюшенная, д. 19/8<br>
-        <span class="contacts__city">Санкт-Петербург</span>
-      </p>
+    <div class="page-footer__contacts">
+      <div class="page-footer__contacts-position contacts">
+        <b class="contacts-title">
+          Приглашаем<br>
+          к сотрудничеству<br>
+          дилеров!
+        </b>
+        <p class="contacts__text">
+          ул. Большая<br>
+          Конюшенная, д. 19/8<br>
+          <span class="contacts__city">Санкт-Петербург</span>
+        </p>
+      </div>
     </div>
     <div class="page-footer__map map">
       <a class="map__link" href="#" target="__blank" rel="nofollow">
-        <img
-          class="map__image"
-          src="https://via.placeholder.com/320x362/8abaae/000000?text=MAP"
-          alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-          width="320"
-          height="362">
+        <picture class="map__picture">
+          <source srcset="img/map_desctop.jpg" media="(min-width: 1280px)">
+          <source srcset="img/map_tablet.jpg" media="(min-width: 768px)">
+          <img
+            class="map__image"
+            src="img/map_mobile.jpg"
+            alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
       </a>
     </div>
   </div>
@@ -165,7 +174,7 @@
     <div class="page-footer__logo">
       <img
         class="logo-image"
-        src="https://via.placeholder.com/128x24/?text=CatEnergy"
+        src="img/footer-logo.svg"
         alt="Cat Energy"
         width="128"
         height="24">
@@ -173,13 +182,13 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="#">Мы в Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="#"><span>Мы в Вконтакте</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--instagram" href="#">Мы в Instagram</a>
+          <a class="social__link social__link--instagram" href="#"><span>Мы в Instagram</span></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">Мы в Facebook</a>
+          <a class="social__link social__link--facebook" href="#"><span>Мы в Facebook</span></a>
         </li>
       </ul>
     </div>
@@ -188,8 +197,10 @@
         HTML Academy
         <img
           class="copyright__logo"
-          src="https://via.placeholder.com/27x34/"
-          alt="Лого HTML Academy">
+          src="img/htmlacademy.svg"
+          alt="Лого HTML Academy"
+          width="27"
+          height="34">
       </a>
     </div>
   </div>

@@ -4,6 +4,7 @@ $basic-font: "Arial", sans-serif;
 // Colors
 $base-accent: #68b738;
 $basic-white: #ffffff;
+$basic-black: #000000;
 $basic-grey: #f2f2f2;
 $special-dark: #444444;
 $special-dark-2: #222222;
@@ -12,3 +13,7 @@ $border-lighten: #e6e6e6;
 $border-lightest: #ebebeb;
 // Padding
 $wrapper-padding: 20px;
+// Viewport
+$tablet-width: 768px;
+$desktop-width: 1280px;
+$desktop-full-width: 1440px;

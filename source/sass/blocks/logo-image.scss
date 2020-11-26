@@ -1,0 +1,7 @@
+.logo-image {
+  &--hide-tablet {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}

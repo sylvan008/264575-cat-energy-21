@@ -4,12 +4,25 @@
 
 .programs__wrapper {
   @include wrapper-x-padding();
+
+  @media (min-width: $tablet-width) {
+    @include wrapper-x-padding(30px);
+  }
 }
 
 .programs__list {
   @include reset-list;
   display: grid;
   grid-row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-row-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
 }
 
 .programs-item {
