@@ -10,10 +10,10 @@
 }
 
 .catalog__item {
-  margin-left: -$wrapper-padding;
-  margin-right: -$wrapper-padding;
-  padding-left: $wrapper-padding;
-  padding-right: $wrapper-padding;
+  margin-left: -$wrapper-padding-mobile;
+  margin-right: -$wrapper-padding-mobile;
+  padding-left: $wrapper-padding-mobile;
+  padding-right: $wrapper-padding-mobile;
 }
 
 .catalog__additional-goods {

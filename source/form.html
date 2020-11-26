@@ -43,45 +43,47 @@
 <main class="page-main program-page">
   <div class="program-page__wrapper">
     <h1 class="page-main__title">Подбор программы</h1>
-    <p class="program-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <p class="program-page__description">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
   </div>
   <form class="program-page__form program" action="https://echo.htmlacademy.ru">
-    <fieldset class="program__fieldset program__cat-params">
-      <legend class="visually-hidden">Параметры кота</legend>
-      <div class="program__group">
-        <label class="program__label input-group">
-          Имя:*
-          <input type="text" placeholder="БАРСИК" name="cat_name" required>
-        </label>
-        <label class="program__label input-group">
-          Вес (КГ):*
-          <input type="number" min="0" placeholder="7" name="cat_weight" required>
-        </label>
-        <label class="program__label input-group">
-          Возраст (ЛЕТ)
-          <input type="number" min="0" placeholder="7" name="cat_age">
-        </label>
-      </div>
-    </fieldset>
-    <fieldset class="program__fieldset program__program-type">
-      <legend class="visually-hidden">Тип программы</legend>
-      <div class="program__group">
-        <label class="program__label input-group">
-          <input type="radio" name="program-type" checked>
-          Похудение
-        </label>
-        <label class="program__label input-group">
-          <input type="radio" name="program-type">
-          Набор массы
-        </label>
-        <label class="program__label input-group">
-          <input type="radio" name="program-type">
-          Не знаю (нужен ваш совет)
-        </label>
-      </div>
-    </fieldset>
+    <div class="program__fieldset-group">
+      <fieldset class="program__fieldset program__cat-params">
+        <legend class="visually-hidden">Параметры кота</legend>
+        <div class="program__group">
+          <label class="program__label input-group">
+            Имя:*
+            <input type="text" placeholder="БАРСИК" name="cat_name" required>
+          </label>
+          <label class="program__label input-group">
+            Вес (КГ):*
+            <input type="number" min="0" placeholder="7" name="cat_weight" required>
+          </label>
+          <label class="program__label input-group">
+            Возраст (ЛЕТ)
+            <input type="number" min="0" placeholder="7" name="cat_age">
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="program__fieldset program__program-type">
+        <legend class="visually-hidden">Тип программы</legend>
+        <div class="program__group">
+          <label class="program__label input-group">
+            <input type="radio" name="program-type" checked>
+            Похудение
+          </label>
+          <label class="program__label input-group">
+            <input type="radio" name="program-type">
+            Набор массы
+          </label>
+          <label class="program__label input-group">
+            <input type="radio" name="program-type">
+            Не знаю (нужен ваш совет)
+          </label>
+        </div>
+      </fieldset>
+    </div>
     <fieldset class="program__fieldset program__owner-contacts">
-      <legend class="program__legend program__legend--owner">Контактные данные<br>(владельца кота)</legend>
+      <legend class="program__legend program__legend--owner">Контактные данные<br> (владельца кота)</legend>
       <div class="program__group">
         <label class="program__label input-group">
           mail:*
@@ -118,7 +120,7 @@
         </label>
       </div>
     </fieldset>
-    <div class="program-page__wrapper">
+    <div class="program-page__wrapper program-page__wrapper--bottom">
       <button class="program__button button" type="submit">Отправить заявку</button>
       <small class="program__form-legend">* — Обязательные поля</small>
     </div>
