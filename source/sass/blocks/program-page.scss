@@ -1,9 +1,22 @@
 .program-page {
-  max-width: 320px;
+  min-width: 320px;
 }
 
 .program-page__wrapper {
   @include wrapper-x-padding();
+
+  &--bottom {
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+      @include wrapper-x-padding(20px, 20px, 40px);
+    }
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 60px;
+      align-content: center;
+    }
+  }
 }
 
 .program-page__description {
@@ -12,8 +25,20 @@
   font-size: 0.875em;
   line-height: 1.285;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    padding-left: 40px;
+  }
 }
 
 .program-page__form {
   margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 82px;
+  }
 }

@@ -1,19 +1,21 @@
-@mixin wrapper-x-padding($left: 20px, $right: 20px) {
-  padding-left: $left;
-  padding-right: $right;
+@mixin wrapper-x-padding($left: 20px, $right: 20px, $extra: 0) {
+  $l: $left + $extra;
+  $r: $right + $extra;
+  padding-left: $l;
+  padding-right: $r;
 
   @media (min-width: $tablet-width) {
-    padding-left: $left + 10;
-    padding-right: $right + 10;
+    padding-left: $l + 10;
+    padding-right: $r + 10;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: $left + 20;
-    padding-right: $right + 20;
+    padding-left: $l + 20;
+    padding-right: $r + 20;
   }
 
   @media (min-width: $desktop-full-width) {
-    padding-left: $left + 90;
-    padding-right: $right + 90;
+    padding-left: $l + 90;
+    padding-right: $r + 90;
   }
 }

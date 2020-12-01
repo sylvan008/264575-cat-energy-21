@@ -12,8 +12,17 @@ $border-light: #d9d9d9;
 $border-lighten: #e6e6e6;
 $border-lightest: #ebebeb;
 // Padding
-$wrapper-padding: 20px;
+$wrapper-padding-mobile: 20px;
+$wrapper-padding-tablet: 30px;
+$wrapper-padding-desktop: 40px;
+$wrapper-padding-desktop-full: 110px;
+$program-extra-padding: 40px;
+// Gap
+$gap-tablet: 60px;
+$gap-desktop: 80px;
 // Viewport
 $tablet-width: 768px;
 $desktop-width: 1280px;
 $desktop-full-width: 1440px;
+$mobile-only-width: $tablet-width - 1;
+$tablet-only-width: $desktop-width - 1;

@@ -35,6 +35,10 @@
 .page-footer__contacts {
   @include wrapper-x-padding();
 
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    @include wrapper-x-padding(20px, 20px, 40px);
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 1;
     grid-row: 1;
