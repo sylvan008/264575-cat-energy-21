@@ -1,5 +1,11 @@
 .additional-goods {
   border-top: 2px solid #68b738;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: $gap-desktop;
+  }
 }
 
 .additional-goods__title {
@@ -18,15 +24,43 @@
 
 .additional-goods__list {
   @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 4;
+  }
 }
 
 .additional-goods__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
   padding-top: 13px;
   padding-bottom: 19px;
-  border-bottom: 1px solid #cdcdcd;
+  border-style: solid;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 1px;
+  border-color: #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    padding: 26px 38px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: $gap-desktop;
+  }
 
   &:first-child {
-    border-top: 1px solid #cdcdcd;
+    border-top-width: 1px;
   }
 }
 
@@ -38,6 +72,27 @@
   line-height: 1em;
   text-transform: uppercase;
   color: $special-dark-2;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.additional-goods__product-futures {
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    justify-self: right;
+  }
+}
+
+.additional-goods__button {
+  @media (max-width: $mobile-only-width) {
+    grid-column: 1;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
 }
 
 .additional-goods__promo {
@@ -57,6 +112,15 @@
   background: $base-accent;
   color: $basic-white;
 
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 4 / 5;
+  }
+
   &::before {
     content: "";
     display: inline-block;
@@ -67,5 +131,9 @@
   span {
     display: inline-block;
     max-width: 161px;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+      text-align: left;
+    }
   }
 }

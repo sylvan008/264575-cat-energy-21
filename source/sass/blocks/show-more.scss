@@ -1,5 +1,11 @@
 .show-more {
+  display: grid;
+  justify-content: space-between;
   border-bottom: 1px solid $border-lightest;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .show-more__legend {
