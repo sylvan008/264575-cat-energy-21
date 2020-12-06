@@ -7,6 +7,19 @@
 
 .catalog__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: $gap-tablet;
+    grid-row-gap: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: $gap-desktop;
+    grid-row-gap: 63px;
+  }
 }
 
 .catalog__item {
@@ -14,6 +27,12 @@
   margin-right: -$wrapper-padding-mobile;
   padding-left: $wrapper-padding-mobile;
   padding-right: $wrapper-padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }
 
 .catalog__additional-goods {
