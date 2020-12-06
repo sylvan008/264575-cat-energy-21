@@ -9,7 +9,7 @@
 <body class="page__body">
 <header class="page-header">
   <div class="page-header__wrapper">
-    <nav class="page-header__main-nav main-nav">
+    <nav class="page-header__main-nav main-nav main-nav--closed main-nav--nojs" data-target>
       <img
         class="page-header__logo-image logo-image"
         src="img/logo-mobile.svg"
@@ -22,7 +22,7 @@
         alt="Cat Energy"
         width="101"
         height="18">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle" type="button" data-toggle>
         <span class="visually-hidden">открыть меню</span>
         <svg width="24" height="18"><path stroke="#000" stroke-width="1.5" d="M0 1.3h24M0 9.3h24M0 17.3h24"/></svg>
       </button>
@@ -205,5 +205,27 @@
     </div>
   </div>
 </footer>
+
+<script>
+  (function() {
+    const OPEN = 'main-nav--open';
+    const CLOSED = 'main-nav--closed';
+    const NO_JS = 'main-nav--nojs';
+    const toggleButton = document.querySelector('[data-toggle]');
+    const target = document.querySelector('[data-target]');
+
+    target.classList.remove(NO_JS);
+
+    toggleButton.addEventListener('click', () => {
+      if (target.classList.contains(CLOSED)) {
+        target.classList.remove(CLOSED);
+        target.classList.add(OPEN);
+      } else {
+        target.classList.remove(OPEN);
+        target.classList.add(CLOSED);
+      }
+    });
+  })();
+</script>
 </body>
 </html>
