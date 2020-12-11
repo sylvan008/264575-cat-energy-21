@@ -2,10 +2,6 @@
   @include wrapper-x-padding();
   padding-top: 1px;
   padding-bottom: 42px;
-
-  @media (min-width: $tablet-width) {
-    @include wrapper-x-padding(30px);
-  }
 }
 
 .how-works__title {
@@ -21,6 +17,7 @@
   @include reset-list;
   display: grid;
   grid-row-gap: 20px;
+  counter-reset: num;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(4, 1fr);
@@ -37,30 +34,112 @@
 }
 
 .how-works__item {
-  &:nth-child(odd) {
-    @media (min-width: $tablet-width) {
-      grid-column: 1 / span 2;
-    }
+  --icon-height: 60px;
+  display: grid;
+  grid-template-columns: var(--icon-height) auto;
+  column-gap: 20px;
+  counter-increment: num;
 
-    @media (min-width: $desktop-width) {
-      grid-column: unset;
+  @media (min-width: $tablet-width) {
+    --icon-height: 80px;
+    column-gap: 30px;
+    row-gap: 31px;
+    grid-template-columns: var(--icon-height) min-content;
+    grid-template-rows: 9px var(--icon-height) auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: unset;
+    grid-template-columns: var(--icon-height) auto;
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+      grid-column: 1 / span 2;
     }
   }
 
   &:nth-child(even) {
-    @media (min-width: $tablet-width) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
       grid-column: 3 / span 2;
     }
+  }
 
-    @media (min-width: $desktop-width) {
-      grid-column: unset;
+  &::before {
+    content: "";
+    width: var(--icon-height);
+    height: var(--icon-height);
+    background-color: $base-accent;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      width: var(--icon-height);
+      height: var(--icon-height);
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: counter(num);
+      font-size: 280px;
+      font-family: $title-font;
+      line-height: 1;
+      color: $basic-grey;
+      grid-row: 1 / -1;
+      grid-column: 2 / 3;
+      justify-self: right;
+      align-self: start;
+    }
+  }
+
+  &--leaf {
+    &::before {
+      background-size: 30px 32px;
+      background-image: url("../../img/icon_leaf.svg");
+    }
+  }
+
+  &--tub {
+    &::before {
+      background-size: 29px 31px;
+      background-image: url("../../img/icon_tub.svg");
+    }
+  }
+
+  &--eat {
+    &::before {
+      background-size: 25px 30px;
+      background-image: url("../../img/icon_eat.svg");
+    }
+  }
+
+  &--alarm {
+    &::before {
+      background-size: 32px 33px;
+      background-image: url("../../img/icon_alarm.svg");
     }
   }
 }
 
 .how-works__text {
+  align-self: center;
   margin: 0;
+  font-family: $basic-font;
   font-size: 0.875em;
   line-height: 1.285;
   color: $special-dark;
+
+  @media (min-width: $tablet-width) {
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+    z-index: 1;
+    align-self: start;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    max-width: 245px;
+  }
 }

@@ -1,4 +1,12 @@
 .logo-image {
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
   &--hide-tablet {
     @media (min-width: $tablet-width) {
       display: none;

@@ -1,13 +1,13 @@
 .programs {
   font-family: $basic-font;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 136px;
+  }
 }
 
 .programs__wrapper {
   @include wrapper-x-padding();
-
-  @media (min-width: $tablet-width) {
-    @include wrapper-x-padding(30px);
-  }
 }
 
 .programs__list {
@@ -26,33 +26,176 @@
 }
 
 .programs-item {
+  //display: grid;
+  //grid-template-columns: auto 1fr;
+  box-sizing: border-box;
+  position: relative;
   padding: 17px 20px;
   background-color: $basic-grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 52px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 52px 55px;
+  }
+
+  &--slim {
+    &::before {
+      top: 21px;
+      left: 22px;
+      width: 50px;
+      height: 53px;
+      background-image: url("../../img/cat_back.svg");
+
+      @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+        width: 200px;
+        height: 211px;
+        top: 81px;
+        left: unset;
+        right: 22.9%;
+        transform: translateX(50%);
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 100px;
+        height: 106px;
+        top: 41px;
+        left: 52px;
+      }
+    }
+
+    .programs-item__description {
+      @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+        width: 63%;
+      }
+    }
+  }
+
+  &--strong {
+    &::before {
+      top: 24px;
+      left: 13px;
+      width: 67px;
+      height: 50px;
+      background-image: url("../../img/cat_back_strong.svg");
+
+      @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+        width: 268px;
+        height: 200px;
+        top: 91px;
+        left: unset;
+        right: 22.9%;
+        transform: translateX(50%);
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 134px;
+        height: 100px;
+        top: 47px;
+        left: 33px;
+        right: unset;
+      }
+    }
+
+    .programs-item__description {
+      @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+        width: 57%;
+      }
+    }
+  }
 }
 
 .programs-item__title {
   margin-top: 13px;
+  margin-left: 71px;
   margin-bottom: 29px;
   font-family: $title-font;
   font-size: 1.5em;
+  font-weight: 400;
   line-height: 1.545;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-bottom: 24px;
+    font-size: 2em;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 214px;
+    margin-bottom: 73px;
+  }
 }
 
 .programs-item__description {
   margin: 0;
   padding-bottom: 23px;
-  border-bottom: 1px solid #d9d9d9;
   font-size: 0.875em;
   line-height: 1.285;
   color: $special-dark;
+
+  @media (max-width: $mobile-only-width) {
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 1em;
+    line-height: 1.5;
+  }
 }
 
 .programs-item__link {
   display: inline-flex;
+  align-items: center;
   margin-top: 19px;
   font-family: $title-font;
   font-size: 1em;
   line-height: 1;
   text-decoration: none;
+  text-transform: uppercase;
   color: currentColor;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+
+  &:hover {
+    &::after {
+      background-position: 0 center;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    width: 32px;
+    height: 16px;
+    margin-left: 15px;
+    background-repeat: no-repeat;
+    background-position: -8px center;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 32 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='26' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M32 6L25.3 11.2L25.3 0.8L32 6Z' fill='black'/%3E%3C/svg%3E");
+    transition: background-position 0.2s ease;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 28px;
+    }
+  }
 }

@@ -1,8 +1,8 @@
 .button {
   display: inline-block;
   width: 100%;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   border: none;
   text-align: center;
   text-transform: uppercase;
@@ -12,9 +12,26 @@
   font-family: $title-font;
   background-color: $base-accent;
   color: $basic-white;
+  transition: background-color, color 0.2s ease;
+
+  &:hover {
+    background-color: $special-accent;
+  }
+
+  &:active {
+    color: opacify(rgba($basic-white, 0), 0.3);
+  }
 
   &--light {
     background-color: $basic-grey;
     color: $special-dark;
+
+    &:hover {
+      background-color: $border-lightest;
+    }
+
+    &:active {
+      color: opacify(rgba($special-dark, 0), 0.3);
+    }
   }
 }
