@@ -75,6 +75,7 @@
 
   .program__group {
     @media (min-width: $tablet-width) {
+      padding: 25px 28px;
       border: 1px solid #cccccc;
     }
   }
@@ -92,6 +93,51 @@
       grid-column-gap: $gap-desktop;
     }
   }
+}
+
+.program__radio {
+  padding-left: 59px;
+  height: 40px;
+}
+
+.program__radio-input {
+  position: absolute;
+  appearance: none;
+}
+
+.program__radio-box {
+  position: absolute;
+  margin-left: -59px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/radiobutton_off.svg");
+}
+
+.program__check {
+  padding-left: 59px;
+  height: 40px;
+}
+
+.program__check-input {
+  position: absolute;
+  appearance: none;
+  margin-left: 40px;
+}
+
+.program__check-box {
+  position: absolute;
+  margin-left: -59px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../../img/checkbox_off.svg");
+}
+
+.program__check-input:checked + .program__check-box {
+  background-image: url("../../img/checkbox_on.svg");
+}
+
+.program__radio-input:checked + .program__radio-box {
+  background-image: url("../../img/radiobutton_on.svg");
 }
 
 .program__comment {
