@@ -98,28 +98,28 @@
   &--leaf {
     &::before {
       background-size: 30px 32px;
-      background-image: url("../../img/icon_leaf.svg");
+      background-image: url("../img/icon_leaf.svg");
     }
   }
 
   &--tub {
     &::before {
       background-size: 29px 31px;
-      background-image: url("../../img/icon_tub.svg");
+      background-image: url("../img/icon_tub.svg");
     }
   }
 
   &--eat {
     &::before {
       background-size: 25px 30px;
-      background-image: url("../../img/icon_eat.svg");
+      background-image: url("../img/icon_eat.svg");
     }
   }
 
   &--alarm {
     &::before {
       background-size: 32px 33px;
-      background-image: url("../../img/icon_alarm.svg");
+      background-image: url("../img/icon_alarm.svg");
     }
   }
 }
