@@ -7,18 +7,15 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  @media (min-width: $tablet-width) {
-    @include wrapper-x-padding(30px);
-  }
-
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-areas:
-      "title title slider slider"
-      "desc desc slider slider"
-      "list list slider slider";
-    grid-template-columns: repeat(4, 1fr);
+      "title slider"
+      "desc slider"
+      "list slider";
+    grid-template-columns: auto 1fr;
     grid-column-gap: 80px;
+    align-content: space-between;
   }
 }
 
@@ -29,6 +26,11 @@
   font-family: $title-font;
   font-size: 2.25em;
   line-height: 1.11;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 69px;
+    margin-bottom: 0;
+  }
 }
 
 .live-example__description {
@@ -38,74 +40,131 @@
   line-height: 1.285;
   font-family: $basic-font;
   color: $special-dark;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    align-self: end;
+  }
 }
 
-.live-example__result-list {
-  grid-area: list;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 31px;
-  grid-row-gap: 25px;
-  line-height: 1;
-
+.live-example__result {
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(3, auto);
+    margin: 54px 0 59px;
+    display: flex;
+    justify-content: flex-start;
   }
 
   @media (min-width: $desktop-width) {
+    grid-area: list;
+    flex-wrap: wrap;
+    margin: 59px 0 75px;
+  }
+}
+
+.live-example__result-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-row-gap: 25px;
+  justify-content: space-between;
+  line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, auto);
+    column-gap: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: flex-start;
     grid-template-columns: repeat(2, 162px);
     grid-column-gap: 42px;
   }
 }
 
 .live-example__result-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
   dt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 64px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
     font-family: $title-font;
+
+    @media (min-width: $tablet-width) {
+      width: 162px;
+    }
   }
 
   dd {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 1em);
     margin: 0;
+    padding: 0 10px;
+    background-color: #eaeaea;
     font-family: $basic-font;
     font-size: 0.75em;
+    text-align: center;
     color: $special-dark;
-  }
-
-  &--total {
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    text-transform: uppercase;
-    line-height: 1.425;
+    line-height: 1;
 
     @media (min-width: $tablet-width) {
-      grid-column: unset;
-      margin-left: auto;
+      bottom: -0.35em;
+      transform: translateX(-50%);
+      padding: 0 8px;
+      font-size: 0.875em;
+      white-space: nowrap;
+    }
+  }
+}
+
+.live-example__total {
+  margin: 26px 0 42px;
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 0.875em;
+  line-height: 1.43;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    flex: 0 1 auto;
+    margin: 0 0 0 auto;
+    font-size: 1.25em;
+    line-height: 1;
+    text-align: right;
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex: 1 0 auto;
+    margin-top: 60px;
+    text-align: left;
+  }
+
+  span {
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      margin-top: 9px;
     }
 
     @media (min-width: $desktop-width) {
-      grid-column: 1 / -1;
-      margin-left: 0;
+      margin: 0 0 0 63px;
     }
+  }
 
-    dt {
-      font-family: $title-font;
-      font-size: 0.875em;
-    }
+  &-wrap--tablet {
+    display: none;
 
-    dd {
-      font-family: $title-font;
-      font-size: 0.875em;
-      color: currentColor;
-
-      &::after {
-        content: ":";
-        margin-right: 0.15em;
-
-        @media (min-width: $desktop-width) {
-          margin-right: 2em;
-        }
-      }
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+      display: block;
     }
   }
 }

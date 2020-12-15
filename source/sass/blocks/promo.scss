@@ -1,6 +1,6 @@
 .promo {
   background: linear-gradient(to bottom, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) 0 0 / 100% 302px no-repeat,
-    url("../../img/index-background-mobile.jpg") center 0 / 320px 302px no-repeat;
+    url("../img/index-background-mobile.jpg") center 0 / 320px 302px no-repeat;
 
   @media (min-width: $tablet-width) {
     background: unset;
@@ -12,7 +12,6 @@
   display: grid;
 
   @media (min-width: $tablet-width) {
-    @include wrapper-x-padding(30px);
     grid-template-rows: repeat(3, auto) 1fr;
     grid-template-columns: 10.7% 1fr;
   }
@@ -74,6 +73,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: -96px;
     max-width: 552px;
     grid-row: 1 / -1;
     grid-column: 3 / 4;
@@ -94,5 +94,6 @@
     max-width: 244px;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
+    font-size: 1.4em;
   }
 }
