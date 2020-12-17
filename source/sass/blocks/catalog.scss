@@ -36,6 +36,15 @@
 }
 
 .catalog__additional-goods {
-  margin-top: 28px;
+  margin-top: 34px;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 68px;
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
 }
