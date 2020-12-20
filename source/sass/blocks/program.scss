@@ -11,19 +11,38 @@
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
     @include wrapper-x-padding(20px, 20px, 40px);
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 41px;
+  }
 }
 
 .program__fieldset-group {
   @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-bottom: 19px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $gap-desktop;
   }
 }
 
+.program__fieldset-group .program__fieldset {
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .program__group {
   display: grid;
   grid-row-gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    grid-row-gap: 20px;
+  }
 }
 
 .program__legend {
@@ -41,12 +60,19 @@
     padding-left: $wrapper-padding-tablet;
     padding-right: $wrapper-padding-tablet;
   }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .program__legend--owner {
-  margin-bottom: 32px;
   padding-top: 0.75em;
   padding-bottom: 0;
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 32px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
@@ -75,6 +101,7 @@
 
   .program__group {
     @media (min-width: $tablet-width) {
+      padding: 25px 28px;
       border: 1px solid #cccccc;
     }
   }
@@ -86,6 +113,11 @@
   padding-bottom: 19px;
   border-top: 2px solid #68b738;
 
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
   .program__group {
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(2, 1fr);
@@ -94,16 +126,117 @@
   }
 }
 
+.program-input--number {
+  appearance: none;
+}
+
+.program-input {
+  box-sizing: border-box;
+  padding: 11px 20px;
+  font-family: $title-font;
+  font-size: 1.25em;
+  line-height: 1.5;
+  border-radius: 0;
+  border: 1px solid #e7e7e7;
+  color: $special-dark;
+
+  &:invalid {
+    border-color: $error;
+  }
+
+  &:hover {
+    border-color: $special-grey;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $special-dark;
+  }
+}
+
+.program__input-wrapper {
+  display: inline-block;
+  position: relative;
+
+  .program-input {
+    width: 100%;
+    padding-right: 40px;
+  }
+}
+
+.program-input__icon {
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.program-input:invalid + .program-input__icon {
+  stroke: $error;
+  fill: $error;
+}
+
+.program-input:disabled + .program-input__icon {
+  stroke: $base-accent;
+  fill: $base-accent;
+}
+
+.program__radio {
+  height: 40px;
+}
+
+.program__radio-input {
+  position: absolute;
+  appearance: none;
+}
+
+.program__radio-box {
+  margin-right: 22px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/radiobutton_off.svg");
+}
+
+.program__check {
+  height: 40px;
+}
+
+.program__check-input {
+  position: absolute;
+  appearance: none;
+  margin-left: 40px;
+}
+
+.program__check-box {
+  margin-right: 22px;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/checkbox_off.svg");
+}
+
+.program__check-input:checked + .program__check-box {
+  background-image: url("../img/checkbox_on.svg");
+}
+
+.program__radio-input:checked + .program__radio-box {
+  background-image: url("../img/radiobutton_on.svg");
+}
+
 .program__comment {
   margin-top: 8px;
   padding-top: 0;
   padding-bottom: 19px;
   border-top: 2px solid #68b738;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
 }
 
 .program__textarea {
-  width: 100%;
   height: 150px;
+  width: calc(100% - 40px);
 }
 
 .program__extra-goods {
@@ -111,6 +244,15 @@
   padding-top: 0;
   padding-bottom: 19px;
   border-top: 2px solid #68b738;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 61px;
+  }
 
   .program__group {
     @media (min-width: $tablet-width) {
@@ -125,6 +267,12 @@
       grid-column-gap: $gap-desktop;
     }
   }
+
+  .program__legend {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 57px;
+    }
+  }
 }
 
 .program__button {
@@ -133,6 +281,8 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    font-size: 1.25em;
+    line-height: 1;
   }
 }
 
@@ -148,5 +298,7 @@
     padding-bottom: 0;
     text-align: left;
     align-self: center;
+    font-size: 1em;
+    line-height: 1;
   }
 }

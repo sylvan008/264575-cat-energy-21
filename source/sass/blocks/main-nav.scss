@@ -107,10 +107,6 @@
   line-height: 1;
   color: currentColor;
 
-  @media (min-width: $desktop-width) {
-    color: $basic-white;
-  }
-
   &:link:hover {
     opacity: 60%;
   }
@@ -123,6 +119,12 @@
     font-size: 1.125em;
     font-weight: 400;
     line-height: 1.333;
+  }
+
+  &--light {
+    @media (min-width: $desktop-width) {
+      color: $basic-white;
+    }
   }
 }
 
@@ -138,7 +140,11 @@
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: $base-accent;
+  }
+}
 
+.main-nav__link--active.main-nav__link--light {
+  &::after {
     @media (min-width: $desktop-width) {
       color: $basic-white;
       border-bottom-color: $basic-white;
