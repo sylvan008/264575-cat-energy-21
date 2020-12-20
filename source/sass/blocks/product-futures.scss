@@ -5,12 +5,25 @@
   font-size: 0.777em;
   line-height: 1.29;
   color: $special-dark;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+  }
+
+  dt {
+    margin-right: 51px;
+  }
 }
 
 .product-futures__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0 9px;
+    border-bottom: 1px solid $special-grey;
+  }
 
   dd {
     margin: 0;
