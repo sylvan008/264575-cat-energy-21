@@ -1,8 +1,14 @@
 .catalog__title {
+  margin-top: 27px;
+  margin-bottom: 41px;
   font-family: $title-font;
   font-weight: 400;
   font-size: 2.25em;
   line-height: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 83px;
+  }
 }
 
 .catalog__list {
