@@ -1,3 +1,7 @@
 .page-header__wrapper {
   @include wrapper-x-padding();
+
+  @media (max-width: $mobile-only-width) {
+    border-bottom: 1px solid $border-lightest;
+  }
 }
