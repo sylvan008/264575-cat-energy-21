@@ -50,11 +50,31 @@
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
       <div class="promo__picture">
         <picture>
-          <source srcset="img/index-can.png" media="(min-width: 1280px)">
-          <source srcset="img/index-can-tablet.png" media="(min-width: 768px)">
+          <source
+            media="(max-width: 767px)"
+            type="image/webp"
+            srcset="img/promo/index-can-mobile.webp 1x, img/promo/index-can-mobile-2x.webp 2x">
+          <source
+            media="(max-width: 1279px)"
+            type="image/webp"
+            srcset="img/promo/index-can-tablet.webp 1x, img/promo/index-can-tablet-2x.webp 2x">
+          <source
+            media="(min-width: 1280px)"
+            type="image/webp"
+            srcset="img/promo/index-can-desktop.webp 1x, img/promo/index-can-desktop-2x.webp 2x">
+          <source
+            media="(max-width: 767px)"
+            srcset="img/promo/index-can-mobile.png 1x, img/promo/index-can-mobile-2x.png 2x">
+          <source
+            media="(max-width: 1279px)"
+            srcset="img/promo/index-can-tablet.jpg 1x, img/promo/index-can-tablet-2x.jpg 2x">
+          <source
+            media="(min-width: 1280px)"
+            srcset="img/promo/index-can-desktop.png 1x, img/promo/index-can-desktop-2x.png 2x">
           <img
             class="promo__image"
-            src="img/index-can-mobile.png"
+            sizes="(max-width: 767px) 280px, (max-width: 1279px) 709px, 552px"
+            src="img/promo/index-can-desktop.png"
             alt="Корм Cat Energy Pro с курицей">
         </picture>
       </div>
@@ -131,31 +151,67 @@
       </div>
       <div class="live-example__cats-comparison cats-comparison">
         <div class="cats-comparison__slider">
-          <div class="cats-comparison__image-wrapper">
+          <div class="cats-comparison__image-wrapper cats-comparison__image-wrapper--before">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/before-mobile-1x.png 1x, img/before-mobile-2x.png 2x">
-              <source media="(max-width: 1279px)" srcset="img/before-tablet-1x.png 1x, img/before-tablet-2x.png 2x">
-              <source media="(min-width: 1280px)" srcset="img/before-desktop-1x.png 1x, img/before-desktop-2x.png 2x">
+              <source
+                media="(max-width: 767px)"
+                type="image/webp"
+                srcset="img/slider/before/before-mobile-1x.webp 1x, img/slider/before/before-mobile-2x.webp 2x">
+              <source
+                media="(max-width: 1279px)"
+                type="image/webp"
+                srcset="img/slider/before/before-tablet-1x.webp 1x, img/slider/before/before-tablet-2x.webp 2x">
+              <source
+                media="(min-width: 1280px)"
+                type="image/webp"
+                srcset="img/slider/before/before-desktop-1x.webp 1x, img/slider/before/before-desktop-2x.webp 2x">
+              <source
+                media="(max-width: 767px)"
+                srcset="img/slider/before/before-mobile-1x.png 1x, img/slider/before/before-mobile-2x.png 2x">
+              <source
+                media="(max-width: 1279px)"
+                srcset="img/slider/before/before-tablet-1x.png 1x, img/slider/before/before-tablet-2x.png 2x">
+              <source
+                media="(min-width: 1280px)"
+                srcset="img/slider/before/before-desktop-1x.png 1x, img/slider/before/before-desktop-2x.png 2x">
               <img
-                class="cats-comparison__cat-image cats-comparison__cat-image--before"
+                class="cats-comparison__cat-image"
                 sizes="(max-width: 767px) 311px,
                     (max-width: 1279px) 354px,
                     365px"
-                src="img/before-desktop-1x.png"
+                src="img/slider/before/before-desktop-1x.png"
                 alt="Толстый кот, до прохождения программы">
             </picture>
           </div>
-          <div class="cats-comparison__image-wrapper">
+          <div class="cats-comparison__image-wrapper cats-comparison__image-wrapper--after">
             <picture>
-              <source media="(max-width: 767px)" srcset="img/after-mobile-1x.png 1x, img/after-mobile-2x.png 2x">
-              <source media="(max-width: 1279px)" srcset="img/after-tablet-1x.png 1x, img/after-tablet-2x.png 2x">
-              <source media="(max-width: 1280px)" srcset="img/after-desktop-1x.png 1x, img/after-desktop-2x.png 2x">
+              <source
+                media="(max-width: 767px)"
+                type="image/webp"
+                srcset="img/slider/after/after-mobile-1x.webp 1x, img/slider/after/after-mobile-2x.webp 2x">
+              <source
+                media="(max-width: 1279px)"
+                type="image/webp"
+                srcset="img/slider/after/after-tablet-1x.webp 1x, img/slider/after/after-tablet-2x.webp 2x">
+              <source
+                media="(min-width: 1280px)"
+                type="image/webp"
+                srcset="img/slider/after/after-desktop-1x.webp 1x, img/slider/after/after-desktop-2x.webp 2x">
+              <source
+                media="(max-width: 767px)"
+                srcset="img/slider/after/after-mobile-1x.png 1x, img/slider/after/after-mobile-2x.png 2x">
+              <source
+                media="(max-width: 1279px)"
+                srcset="img/slider/after/after-tablet-1x.png 1x, img/slider/after/after-tablet-2x.png 2x">
+              <source
+                media="(min-width: 1280px)"
+                srcset="img/slider/after/after-desktop-1x.png 1x, img/slider/after/after-desktop-2x.png 2x">
               <img
-                class="cats-comparison__cat-image cats-comparison__cat-image--after"
+                class="cats-comparison__cat-image"
                 sizes="(max-width: 767px) 311px,
                     (max-width: 1279px) 354px,
                     325px"
-                src="img/after-desktop-1x.png"
+                src="img/slider/after/after-desktop-1x.png"
                 alt="Стройный кот, после прохождения программы">
             </picture>
           </div>
@@ -190,11 +246,24 @@
     <div class="page-footer__map map">
       <a class="map__link" href="#" target="__blank" rel="nofollow">
         <picture class="map__picture">
-          <source srcset="img/map_desctop.jpg" media="(min-width: 1280px)">
-          <source srcset="img/map_tablet.jpg" media="(min-width: 768px)">
+          <source
+            media="(min-width: 1280px)"
+            type="image/webp"
+            srcset="img/map/map_desktop.webp, img/map/map_desktop-2x.webp">
+          <source
+            media="(min-width: 768px)"
+            type="image/webp"
+            srcset="img/map/map_tablet.webp, img/map/map_tablet-2x.webp">
+          <source
+            media="(max-width: 767px)"
+            type="image/webp"
+            srcset="img/map/map_mobile.webp, img/map/map_mobile-2x.webp">
+          <source media="(min-width: 1280px)" srcset="img/map/map_desktop.jpg, img/map/map_desktop-2x.jpg">
+          <source media="(min-width: 768px)" srcset="img/map/map_tablet.jpg, img/map/map_tablet-2x.jpg">
+          <source media="(max-width: 767px)" srcset="img/map/map_mobile.jpg, img/map/map_mobile-2x.jpg">
           <img
             class="map__image"
-            src="img/map_mobile.jpg"
+            src="img/map/map_mobile.jpg"
             alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
         </picture>
       </a>
