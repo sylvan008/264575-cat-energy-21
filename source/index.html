@@ -48,14 +48,16 @@
     <div class="promo__wrapper">
       <h2 class="promo__title">Функциональное <br> питание для котов</h2>
       <p class="promo__slogan">Занялся собой? Займись котом!</p>
-      <picture class="promo__picture">
-        <source srcset="img/index-can.png" media="(min-width: 1280px)">
-        <source srcset="img/index-can-tablet.png" media="(min-width: 768px)">
-        <img
-          class="promo__image"
-          src="img/index-can-mobile.png"
-          alt="Корм Cat Energy Pro с курицей">
-      </picture>
+      <div class="promo__picture">
+        <picture>
+          <source srcset="img/index-can.png" media="(min-width: 1280px)">
+          <source srcset="img/index-can-tablet.png" media="(min-width: 768px)">
+          <img
+            class="promo__image"
+            src="img/index-can-mobile.png"
+            alt="Корм Cat Energy Pro с курицей">
+        </picture>
+      </div>
       <a class="promo__button button" href="./form.html">Подобрать программу</a>
     </div>
   </section>
@@ -129,26 +131,34 @@
       </div>
       <div class="live-example__cats-comparison cats-comparison">
         <div class="cats-comparison__slider">
-          <picture class="cats-comparison__cat-image cats-comparison__cat-image--before">
-            <source srcset="img/before-mobile.png" media="(max-width: 767px)">
-            <source srcset="img/before_tablet.png" media="(max-width: 1279px)">
-            <img
-              sizes="(max-width: 767px) 311px,
+          <div class="cats-comparison__image-wrapper">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/before-mobile-1x.png 1x, img/before-mobile-2x.png 2x">
+              <source media="(max-width: 1279px)" srcset="img/before-tablet-1x.png 1x, img/before-tablet-2x.png 2x">
+              <source media="(min-width: 1280px)" srcset="img/before-desktop-1x.png 1x, img/before-desktop-2x.png 2x">
+              <img
+                class="cats-comparison__cat-image cats-comparison__cat-image--before"
+                sizes="(max-width: 767px) 311px,
                     (max-width: 1279px) 354px,
                     365px"
-              src="img/before_desktop.png"
-              alt="Толстый кот, до прохождения программы">
-          </picture>
-          <picture class="cats-comparison__cat-image cats-comparison__cat-image--after">
-            <source srcset="img/after-mobile.png" media="(max-width: 767px)">
-            <source srcset="img/after_tablet.png" media="(max-width: 1279px)">
-            <img
-              sizes="(max-width: 767px) 311px,
+                src="img/before-desktop-1x.png"
+                alt="Толстый кот, до прохождения программы">
+            </picture>
+          </div>
+          <div class="cats-comparison__image-wrapper">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/after-mobile-1x.png 1x, img/after-mobile-2x.png 2x">
+              <source media="(max-width: 1279px)" srcset="img/after-tablet-1x.png 1x, img/after-tablet-2x.png 2x">
+              <source media="(max-width: 1280px)" srcset="img/after-desktop-1x.png 1x, img/after-desktop-2x.png 2x">
+              <img
+                class="cats-comparison__cat-image cats-comparison__cat-image--after"
+                sizes="(max-width: 767px) 311px,
                     (max-width: 1279px) 354px,
                     325px"
-              src="img/after_desktop.png"
-              alt="Стройный кот, после прохождения программы">
-          </picture>
+                src="img/after-desktop-1x.png"
+                alt="Стройный кот, после прохождения программы">
+            </picture>
+          </div>
         </div>
         <div class="cats-comparison__toggle">
           <span class="cats-comparison__cat-status cats-comparison__cat-status--was">Было</span>
