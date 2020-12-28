@@ -65,22 +65,6 @@
     }
   }
 
-  &::before {
-    content: "";
-    width: var(--icon-height);
-    height: var(--icon-height);
-    background-color: $base-accent;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media (min-width: $tablet-width) {
-      grid-row: 2 / 3;
-      grid-column: 1 / 2;
-      width: var(--icon-height);
-      height: var(--icon-height);
-    }
-  }
-
   &::after {
     @media (min-width: $tablet-width) {
       content: counter(num);
@@ -94,33 +78,21 @@
       align-self: start;
     }
   }
+}
 
-  &--leaf {
-    &::before {
-      background-size: 30px 32px;
-      background-image: url("../img/icon_leaf.svg");
-    }
-  }
+.how-works__icon-wrapper {
+  width: var(--icon-height);
+  height: var(--icon-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $base-accent;
 
-  &--tub {
-    &::before {
-      background-size: 29px 31px;
-      background-image: url("../img/icon_tub.svg");
-    }
-  }
-
-  &--eat {
-    &::before {
-      background-size: 25px 30px;
-      background-image: url("../img/icon_eat.svg");
-    }
-  }
-
-  &--alarm {
-    &::before {
-      background-size: 32px 33px;
-      background-image: url("../img/icon_alarm.svg");
-    }
+  @media (min-width: $tablet-width) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: var(--icon-height);
+    height: var(--icon-height);
   }
 }
 
