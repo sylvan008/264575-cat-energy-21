@@ -1,12 +1,5 @@
 .logo-image {
   display: inline-block;
-  width: 34px;
-  height: 38px;
-
-  @media (min-width: $tablet-width) {
-    width: 174px;
-    height: 52px;
-  }
 
   &:hover {
     opacity: 80%;
@@ -16,6 +9,18 @@
     opacity: 60%;
   }
 
+  &--main {
+    @media (max-width: $mobile-only-width) {
+      width: 34px;
+      height: 38px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 174px;
+      height: 52px;
+    }
+  }
+
   .logo-mobile {
     @media (min-width: $tablet-width) {
       display: none;
@@ -23,8 +28,16 @@
   }
 
   .logo-tablet {
+    width: 174px;
+    height: 52px;
+
     @media (max-width: $mobile-only-width) {
       display: none;
     }
+  }
+
+  .logo-footer {
+    width: 101px;
+    height: 18px;
   }
 }
