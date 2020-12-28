@@ -16,15 +16,6 @@
     opacity: 60%;
   }
 
-  &.logo-footer {
-    width: 101px;
-    height: 18px;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
   .logo-mobile {
     @media (min-width: $tablet-width) {
       display: none;

@@ -5,3 +5,9 @@
     border-bottom: 1px solid $border-lightest;
   }
 }
+
+.page-header__logo--mobile-only {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
