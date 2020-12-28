@@ -5,11 +5,11 @@
     background-repeat: no-repeat;
     background-position: 0 0, center 0;
     background-size: 100% 302px, 320px 302px;
-    background-image: var(--promo-gradient), url("../img/index-background-mobile.jpg");
+    background-image: var(--promo-gradient), url("../img/promo/index-background-mobile.jpg");
   }
 
   @media (max-width: $mobile-only-width) and (min-resolution: 2dppx) {
-    background-image: var(--promo-gradient), url("../img/index-background-mobile-2x.jpg");
+    background-image: var(--promo-gradient), url("../img/promo/index-background-mobile-2x.jpg");
   }
 
   &::before {
