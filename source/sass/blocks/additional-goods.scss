@@ -140,11 +140,11 @@
   background-color: $base-accent;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../img/gift-photo-mobile.jpg");
+  background-image: url("../img/gift/gift-photo-mobile.jpg");
   color: $basic-white;
 
   @media (max-width: $mobile-only-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/gift-photo-mobile-2x.jpg");
+    background-image: url("../img/gift/gift-photo-mobile-2x.jpg");
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
@@ -152,29 +152,27 @@
     margin-top: 69px;
     flex-direction: row;
     justify-content: space-around;
-    background-image: url("../img/gift-photo-tablet.jpg");
+    background-image: url("../img/gift/gift-photo-tablet.jpg");
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/gift-photo-tablet-2x.jpg");
+    background-image: url("../img/gift/gift-photo-tablet-2x.jpg");
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 4 / 5;
     margin-top: 0;
-    background-image: url("../img/gift-photo-desktop.jpg");
+    background-image: url("../img/gift/gift-photo-desktop.jpg");
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/gift-photo-desktop-2x.jpg");
+    background-image: url("../img/gift/gift-photo-desktop-2x.jpg");
   }
 
-  &::before {
-    content: "";
+  .additional-goods__promo-icon {
     display: inline-block;
     width: 78px;
     height: 80px;
-    background: url("../img/icon_gift.svg") 0 0 / cover no-repeat;
 
     @media (min-width: $tablet-width) {
       width: 80px;
