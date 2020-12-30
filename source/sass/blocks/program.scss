@@ -134,11 +134,16 @@
   box-sizing: border-box;
   padding: 11px 20px;
   font-family: $title-font;
-  font-size: 1.25em;
-  line-height: 1.5;
+  font-size: 1em;
+  line-height: 1.124;
   border-radius: 0;
   border: 1px solid #e7e7e7;
   color: $special-dark;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
 
   &:invalid {
     border-color: $error;
@@ -174,6 +179,11 @@
 .program-input:invalid + .program-input__icon {
   stroke: $error;
   fill: $error;
+}
+
+.program-input:hover + .program-input__icon {
+  stroke: $special-grey;
+  fill: $special-grey;
 }
 
 .program-input:disabled + .program-input__icon {
