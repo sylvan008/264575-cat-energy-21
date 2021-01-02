@@ -94,7 +94,7 @@ const sprite = () => {
   return gulp.src('source/img/svg/common/*.svg')
     .pipe(svgstore())
     .pipe(rename('sprite_common.svg'))
-    .pipe(gulp.dest(`${BUILD_PATH}/img/svg/`))
+    .pipe(gulp.dest(`${BUILD_PATH}/img/svg/common`))
 }
 
 exports.sprite = sprite;
