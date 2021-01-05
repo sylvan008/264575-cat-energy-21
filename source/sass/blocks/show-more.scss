@@ -17,13 +17,11 @@
     align-items: end;
   }
 
-  &::before {
-    content: "";
+  &__icon-plus {
     width: 30px;
     height: 30px;
     margin-bottom: 23px;
     justify-self: center;
-    background: url("../img/icon_plus.svg") 50% 0 / cover no-repeat;
 
     @media (min-width: $tablet-width) {
       width: 60px;
