@@ -48,6 +48,22 @@ git clone SSH-адрес_вашего_форка
 
 #### 4. Начинайте обучение!
 
+#### 5. Сборка проекта
+
+Обязательные требования: NodeJS, NPM, терминал.
+
+Установка зависимостей:
+```
+npm install
+```
+Локальный сервер разработки:
+```
+npm run start
+```
+Сборка проекта для релиза:
+```
+npm run build
+```
 ---
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
