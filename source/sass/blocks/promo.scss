@@ -43,6 +43,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-rows: 210px 60px 105px 1fr;
     grid-template-columns: 80px auto 1fr;
   }
 }
@@ -58,22 +59,28 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 0.463em;
+    margin: 0;
     font-size: 3.75em;
     text-align: left;
     color: $basic-black;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
+
+  @media (min-width: $desktop-width) {
+    align-self: end;
+  }
 }
 
 .promo__slogan {
+  align-self: end;
   margin-top: 0;
   margin-bottom: 2.07em;
   font-size: 0.875em;
   font-family: $title-font;
   line-height: 1;
   text-align: center;
+  text-transform: uppercase;
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
@@ -84,6 +91,10 @@
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -99,7 +110,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: -42px;
+    margin-top: 7px;
+    margin-left: -45px;
     max-width: 552px;
     grid-row: 1 / -1;
     grid-column: 3 / 4;
@@ -120,6 +132,10 @@
     max-width: 244px;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    font-size: 1.4em;
+    font-size: 1.25em;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: end;
   }
 }
