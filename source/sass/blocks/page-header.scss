@@ -7,6 +7,8 @@
 }
 
 .page-header__logo--mobile-only {
+  margin-left: -12px;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
