@@ -1,3 +1,4 @@
-<svg viewBox="0 0 20 20" stroke="#000" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path transform="scale(.97098 1.0282) rotate(-45 24.5 7.2)" d="M0-.8h24.8"/><path transform="scale(.97098 1.0282) rotate(45 -1.8 2.2)" d="M0-.8h24.8"/>
+<svg width="20" height="20" stroke-width="1.5" stroke="#000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path transform="matrix(.68659 -.72705 .68659 .72705 2 20)" d="M0-.75h24.76"/>
+  <path transform="matrix(.68659 .72705 -.68659 .72705 1 2)" d="M0-.75h24.76"/>
 </svg>

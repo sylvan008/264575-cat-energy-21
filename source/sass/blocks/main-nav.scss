@@ -11,7 +11,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 59px;
+    padding-top: 54px;
   }
 
   &--open {
@@ -22,7 +22,7 @@
     }
 
     .main-nav__toggle {
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' stroke='%23000' stroke-width='1.5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='scale(.97098 1.0282) rotate(-45 24.5 7.2)' d='M0-.8h24.8'/%3E%3Cpath transform='scale(.97098 1.0282) rotate(45 -1.8 2.2)' d='M0-.8h24.8'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' stroke-width='1.5' stroke='%23000' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath transform='matrix(.68659 -.72705 .68659 .72705 2 20)' d='M0-.75h24.76'/%3E%3Cpath transform='matrix(.68659 .72705 -.68659 .72705 1 2)' d='M0-.75h24.76'/%3E%3C/svg%3E");
     }
   }
 
@@ -34,7 +34,7 @@
     }
 
     .main-nav__toggle {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 18'%3E%3Cpath stroke='%23000' stroke-width='1.5' d='M0 1.3h24M0 9.3h24M0 17.3h24'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='24' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='1.5' d='M0 1.3h24M0 9.3h24M0 17.3h24'/%3E%3C/svg%3E");
     }
   }
 
@@ -71,7 +71,7 @@
 .main-nav__list {
   @include reset-list;
   flex: 1 0 100%;
-  margin-top: 16px;
+  margin-top: 11px;
   margin-left: -20px;
   margin-right: -20px;
 
@@ -84,7 +84,7 @@
 
 .main-nav__item {
   padding-top: 22px;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
   text-align: center;
 
   @media (max-width: $mobile-only-width) {
@@ -101,7 +101,7 @@
     border-top: none;
 
     &:not(:last-child) {
-      margin-right: 2em;
+      margin-right: 2.2em;
     }
   }
 }
@@ -127,6 +127,11 @@
     font-size: 1.125em;
     font-weight: 400;
     line-height: 1.333;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 1.25em;
+    line-height: 1.49;
   }
 
   &--light {
