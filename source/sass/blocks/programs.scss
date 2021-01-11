@@ -2,12 +2,16 @@
   font-family: $basic-font;
 
   @media (min-width: $desktop-width) {
-    margin-top: 136px;
+    margin-top: 134px;
   }
 }
 
 .programs__wrapper {
   @include wrapper-x-padding();
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+  }
 }
 
 .programs__list {
@@ -32,14 +36,18 @@
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
-    padding: 77px 52px 53px;
+    padding: 74px 52px 53px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 77px 52px 55px;
+    padding: 75px 52px 58px;
   }
 
   &--slim {
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+      padding: 69px 52px 57px;
+    }
+
     .programs-item__description {
       @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
         width: 63%;
@@ -48,6 +56,10 @@
   }
 
   &--strong {
+    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+      padding: 77px 52px 56px;
+    }
+
     .programs-item__description {
       @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
         width: 57%;
@@ -57,9 +69,7 @@
 }
 
 .programs-item__title {
-  margin-top: 13px;
-  margin-left: 71px;
-  margin-bottom: 29px;
+  margin: 13px 0 29px 71px;
   font-family: $title-font;
   font-size: 1.5em;
   font-weight: 400;
@@ -67,15 +77,13 @@
   text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    margin-left: 0;
-    margin-bottom: 24px;
-    font-size: 2em;
+    margin: 0 0 24px;
+    font-size: 2.25em;
     line-height: 1;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 214px;
-    margin-bottom: 73px;
+    margin: 0 0 73px 162px;
   }
 }
 
@@ -99,7 +107,7 @@
 .programs-item__link {
   display: inline-flex;
   align-items: center;
-  margin-top: 19px;
+  margin-top: 18px;
   font-family: $title-font;
   font-size: 1em;
   line-height: 1;
@@ -108,8 +116,13 @@
   color: currentColor;
 
   @media (min-width: $tablet-width) {
+    margin-top: 29px;
     font-size: 1.25em;
     line-height: 1.5;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 5px;
   }
 
   &:hover {
@@ -154,7 +167,7 @@
     @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
       width: 200px;
       height: 211px;
-      top: 81px;
+      top: 72px;
       left: unset;
       right: 22.9%;
       transform: translateX(50%);
