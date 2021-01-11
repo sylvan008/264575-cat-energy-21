@@ -5,12 +5,23 @@
 }
 
 .how-works__title {
-  margin-top: 26px;
+  margin-top: 29px;
   margin-bottom: 38px;
   font-family: $title-font;
   font-weight: 400;
   font-size: 2.25em;
   line-height: 1.11;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 43px;
+    margin-bottom: 34px;
+    font-size: 3.75em;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 70px;
+  }
 }
 
 .how-works__list {
@@ -109,6 +120,8 @@
     grid-column: 1 / -1;
     z-index: 1;
     align-self: start;
+    font-size: 1em;
+    line-height: 1.5;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
