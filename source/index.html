@@ -84,7 +84,7 @@
     <div class="programs__wrapper">
       <ul class="programs__list">
         <li class="programs__item programs-item programs-item--slim">
-          <svg class="programs__icon programs__icon--slim">
+          <svg class="programs__icon programs__icon--slim" width="50" height="53">
             <use xlink:href="#cat-back__slim"></use>
           </svg>
           <h3 class="programs-item__title programs-item__title--cat-icon">Похудение</h3>
@@ -95,7 +95,7 @@
           <a class="programs-item__link" href="catalog.html">Каталог Slim</a>
         </li>
         <li class="programs__item programs-item programs-item--strong">
-          <svg class="programs__icon programs__icon--strong">
+          <svg class="programs__icon programs__icon--strong" width="67" height="50">
             <use xlink:href="#cat-back__strong"></use>
           </svg>
           <h3 class="programs-item__title programs-item__title--panther-icon">Набор массы</h3>
@@ -153,7 +153,7 @@
       <h2 class="live-example__title">Живой пример</h2>
       <p class="live-example__description">
         Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
-        изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+        изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
       </p>
       <div class="live-example__result">
         <dl class="live-example__result-list">
@@ -176,71 +176,45 @@
           <div class="cats-comparison__image-wrapper cats-comparison__image-wrapper--before">
             <picture>
               <source
-                media="(max-width: 767px)"
                 type="image/webp"
-                srcset="img/slider/before/before-mobile-1x.webp 1x, img/slider/before/before-mobile-2x.webp 2x">
+                srcset="img/slider/before/before-mobile-1x.webp 311w,
+                        img/slider/before/before_desktop_1x.webp 677w,
+                        img/slider/before/before_desktop_2x.webp 1354w">
               <source
-                media="(max-width: 1279px)"
-                type="image/webp"
-                srcset="img/slider/before/before-tablet-1x.webp 1x, img/slider/before/before-tablet-2x.webp 2x">
-              <source
-                media="(min-width: 1280px)"
-                type="image/webp"
-                srcset="img/slider/before/before-desktop-1x.webp 1x, img/slider/before/before-desktop-2x.webp 2x">
-              <source
-                media="(max-width: 767px)"
-                srcset="img/slider/before/before-mobile-1x.png 1x, img/slider/before/before-mobile-2x.png 2x">
-              <source
-                media="(max-width: 1279px)"
-                srcset="img/slider/before/before-tablet-1x.png 1x, img/slider/before/before-tablet-2x.png 2x">
-              <source
-                media="(min-width: 1280px)"
-                srcset="img/slider/before/before-desktop-1x.png 1x, img/slider/before/before-desktop-2x.png 2x">
+                srcset="img/slider/before/before-mobile-1x.png 311w,
+                        img/slider/before/before_desktop_1x.png 677w,
+                        img/slider/before/before_desktop_2x.png 1354w">
               <img
                 class="cats-comparison__cat-image"
-                sizes="(max-width: 767px) 311px,
-                    (max-width: 1279px) 354px,
-                    365px"
+                sizes="(max-width: 767px) 311px, 677px"
                 src="img/slider/before/before-desktop-1x.png"
+                height="520px"
                 alt="Толстый кот, до прохождения программы">
             </picture>
           </div>
           <div class="cats-comparison__image-wrapper cats-comparison__image-wrapper--after">
             <picture>
               <source
-                media="(max-width: 767px)"
                 type="image/webp"
-                srcset="img/slider/after/after-mobile-1x.webp 1x, img/slider/after/after-mobile-2x.webp 2x">
+                srcset="img/slider/after/after-mobile-1x.webp 251w,
+                        img/slider/after/after_desktop_1x.webp 545w,
+                        img/slider/after/after_desktop_2x.webp 1090w">
               <source
-                media="(max-width: 1279px)"
-                type="image/webp"
-                srcset="img/slider/after/after-tablet-1x.webp 1x, img/slider/after/after-tablet-2x.webp 2x">
-              <source
-                media="(min-width: 1280px)"
-                type="image/webp"
-                srcset="img/slider/after/after-desktop-1x.webp 1x, img/slider/after/after-desktop-2x.webp 2x">
-              <source
-                media="(max-width: 767px)"
-                srcset="img/slider/after/after-mobile-1x.png 1x, img/slider/after/after-mobile-2x.png 2x">
-              <source
-                media="(max-width: 1279px)"
-                srcset="img/slider/after/after-tablet-1x.png 1x, img/slider/after/after-tablet-2x.png 2x">
-              <source
-                media="(min-width: 1280px)"
-                srcset="img/slider/after/after-desktop-1x.png 1x, img/slider/after/after-desktop-2x.png 2x">
+                srcset="img/slider/after/after-mobile-1x.png 251w,
+                        img/slider/after/after_desktop_1x.png 545w,
+                        img/slider/after/after_desktop_2x.png 1090w">
               <img
                 class="cats-comparison__cat-image"
-                sizes="(max-width: 767px) 311px,
-                    (max-width: 1279px) 354px,
-                    325px"
+                sizes="(max-width: 767px) 311px, 545px"
                 src="img/slider/after/after-desktop-1x.png"
+                height="520px"
                 alt="Стройный кот, после прохождения программы">
             </picture>
           </div>
         </div>
         <div class="cats-comparison__toggle">
-          <span class="cats-comparison__cat-status cats-comparison__cat-status--was">Было</span>
-          <span class="cats-comparison__cat-status cats-comparison__cat-status--become">Стало</span>
+          <button class="cats-comparison__cat-status cats-comparison__cat-status--was">Было</button>
+          <button class="cats-comparison__cat-status cats-comparison__cat-status--become">Стало</button>
           <div class="cats-comparison__image-toggle">
             <div class="cats-comparison__image-toggle-badge"></div>
           </div>
@@ -249,7 +223,7 @@
     </div>
   </section>
 </main>
-<footer class="page-footer">
+<footer class="page-footer page-footer--background">
   <div class="page-footer__top-wrapper">
     <div class="page-footer__contacts">
       <div class="page-footer__contacts-position contacts">
@@ -293,7 +267,7 @@
   </div>
   <div class="page-footer__bottom-wrapper">
     <a class="page-footer__logo" href="/">
-      <svg class="logo-image logo-footer" width="124" height="24">
+      <svg class="logo-image logo-footer" width="128" height="24">
         <use xlink:href="img/svg/common/sprite_common.svg#logo_footer"></use>
       </svg>
     </a>
