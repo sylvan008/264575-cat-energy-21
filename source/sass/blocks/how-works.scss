@@ -1,7 +1,10 @@
 .how-works__wrapper {
   @include wrapper-x-padding();
   padding-top: 1px;
-  padding-bottom: 42px;
+
+  @media (max-width: $mobile-only-width) {
+    padding-bottom: 42px;
+  }
 }
 
 .how-works__title {

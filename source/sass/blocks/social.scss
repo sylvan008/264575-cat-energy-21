@@ -4,6 +4,11 @@
   grid-template-columns: repeat(3, min-content);
   grid-column-gap: 33px;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 27px;
+    grid-column-gap: 24px;
+  }
 }
 
 .social__item {
@@ -17,18 +22,33 @@
 
 .social__icon {
   &--vkontakte {
+    @media (max-width: $mobile-only-width) {
+      width: 23px;
+      height: 16px;
+    }
+
     &:hover {
       fill: $base-accent;
     }
   }
 
   &--instagram {
+    @media (max-width: $mobile-only-width) {
+      width: 16px;
+      height: 16px;
+    }
+
     &:hover {
       fill: $base-accent;
     }
   }
 
   &--facebook {
+    @media (max-width: $mobile-only-width) {
+      width: 23px;
+      height: 23px;
+    }
+
     &:hover {
       stroke: $base-accent;
     }

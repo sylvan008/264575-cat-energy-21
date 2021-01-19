@@ -19,12 +19,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 55px;
+    padding-top: 49px;
     padding-bottom: 61px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 57px;
+    padding-top: 52px;
     padding-bottom: 58px;
   }
 }
@@ -35,16 +35,23 @@
   text-align: center;
 
   @media (max-width: $mobile-only-width) {
-    padding-top: 39px;
-    padding-bottom: 32px;
+    padding-top: 35px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
+    margin-top: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
   }
 }
 
 .page-footer__contacts {
+  background-color: $basic-white;
+
   @include wrapper-x-padding();
 
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
@@ -60,12 +67,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 80px;
+    background-color: unset;
   }
+}
 
-  &-position {
-    @media (min-width: $desktop-width) {
-      grid-column: 1 / span 2;
-    }
+.page-footer__contacts-position {
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / span 2;
+    margin-top: -16px;
   }
 }
 
@@ -81,7 +90,7 @@
 
   @media (max-width: $mobile-only-width) {
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $tablet-width) {
