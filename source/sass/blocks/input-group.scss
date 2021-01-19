@@ -1,6 +1,14 @@
 .input-group {
   display: grid;
   grid-template-columns: max-content minmax(100px, 1fr);
-  grid-column-gap: 10px;
+  column-gap: 17px;
   align-items: center;
+}
+
+.input-group--contacts {
+  column-gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 14px;
+  }
 }

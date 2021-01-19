@@ -13,13 +13,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 }
 
 .program__fieldset-group {
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding-left: 110px;
     padding-right: 110px;
     padding-bottom: 19px;
@@ -31,6 +31,10 @@
 
 .program__fieldset-group .program__fieldset {
   @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -38,7 +42,7 @@
 
 .program__group {
   display: grid;
-  grid-row-gap: 13px;
+  grid-row-gap: 15px;
 
   @media (min-width: $tablet-width) {
     grid-row-gap: 20px;
@@ -49,20 +53,31 @@
   margin-left: -$wrapper-padding-mobile;
   margin-bottom: 34px;
   padding-left: $wrapper-padding-mobile;
-  padding-right: 15px;
+  padding-right: 20px;
   padding-bottom: 0.2em;
   font-size: 1.5em;
   line-height: 1.085;
   text-transform: none;
 
-  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
-    margin-left: -$wrapper-padding-tablet;
-    padding-left: $wrapper-padding-tablet;
-    padding-right: $wrapper-padding-tablet;
+  @media (min-width: $tablet-width) {
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
+    font-size: 36px;
+  }
+}
+
+.program__label {
+  font-size: 1em;
+  line-height: 1.125;
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.25em;
+    line-height: 1.5;
   }
 }
 
@@ -71,39 +86,62 @@
   padding-bottom: 0;
 
   @media (max-width: $mobile-only-width) {
-    margin-bottom: 32px;
+    width: 182px;
+    margin-bottom: 36px;
   }
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
+  }
+}
 
-    br {
-      display: none;
-    }
+.program__legend--comment {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
   }
 }
 
 .program__cat-params {
   padding-top: 27px;
-  padding-bottom: 27px;
+  padding-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 27px;
+  }
+}
+
+.program__cat-params .program__group {
+  row-gap: 15px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
 }
 
 .program__program-type {
-  padding-top: 20px;
-  padding-bottom: 22px;
+  padding-top: 23px;
+  padding-bottom: 17px;
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
 
   @media (min-width: $tablet-width) {
+    padding-top: 4px;
+    padding-bottom: 22px;
     border-top: none;
     border-bottom: none;
   }
 
-  .program__group {
-    @media (min-width: $tablet-width) {
-      padding: 25px 28px;
-      border: 1px solid #cccccc;
-    }
+  @media (min-width: $desktop-width) {
+    padding-top: 27px;
+  }
+}
+
+.program__program-type .program__group {
+  row-gap: 13px;
+
+  @media (min-width: $tablet-width) {
+    padding: 24px 28px;
+    border: 1px solid #cccccc;
   }
 }
 
@@ -113,9 +151,13 @@
   padding-bottom: 19px;
   border-top: 2px solid #68b738;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 51px;
+  }
+
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
   }
 
   .program__group {
@@ -132,16 +174,17 @@
 
 .program-input {
   box-sizing: border-box;
-  padding: 11px 20px;
+  padding: 9px 14px;
   font-family: $title-font;
   font-size: 1em;
-  line-height: 1.124;
   border-radius: 0;
   border: 1px solid #e7e7e7;
   color: $special-dark;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
-    font-size: 1.25em;
+    padding: 10px 20px;
+    font-size: 1em;
     line-height: 1.5;
   }
 
@@ -192,7 +235,11 @@
 }
 
 .program__radio {
-  height: 40px;
+  height: 30px;
+
+  @media (min-width: $tablet-width) {
+    height: 40px;
+  }
 }
 
 .program__radio-input {
@@ -201,14 +248,24 @@
 }
 
 .program__radio-box {
-  margin-right: 22px;
-  width: 40px;
-  height: 40px;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='%23CDCDCD'/%3E%3C/svg%3E%0A");
+  margin-right: -2px;
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='%23CDCDCD'/%3E%3C/svg%3E%0A");
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin-right: 2px;
+  }
 }
 
 .program__check {
-  height: 40px;
+  height: 30px;
+
+  @media (min-width: $tablet-width) {
+    height: 40px;
+  }
 }
 
 .program__check-input {
@@ -218,39 +275,53 @@
 }
 
 .program__check-box {
-  margin-right: 22px;
-  width: 40px;
-  height: 40px;
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='39' height='39' stroke='%23CDCDCD'/%3E%3C/svg%3E%0A");
+  margin-right: -1px;
+  width: 30px;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='39' height='39' stroke='%23CDCDCD'/%3E%3C/svg%3E%0A");
+
+  @media (min-width: $tablet-width) {
+    margin-right: 2px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .program__check-input:checked + .program__check-box {
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='39' height='39' stroke='%23CDCDCD'/%3E%3Cpath d='M18 24.718L12.3 18.2695L11.25 19.4574L18 27.0938L29.25 14.3665L28.2 13.0938L18 24.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='39' height='39' stroke='%23CDCDCD'/%3E%3Cpath d='M18 24.718L12.3 18.2695L11.25 19.4574L18 27.0938L29.25 14.3665L28.2 13.0938L18 24.718Z' fill='%2368B738'/%3E%3C/svg%3E%0A");
 }
 
 .program__radio-input:checked + .program__radio-box {
-  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='%23CDCDCD'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%2368B738'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='%23CDCDCD'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%2368B738'/%3E%3C/svg%3E");
 }
 
 .program__comment {
-  margin-top: 8px;
+  margin-top: 5px;
   padding-top: 0;
   padding-bottom: 19px;
   border-top: 2px solid #68b738;
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
   }
 }
 
 .program__textarea {
   height: 150px;
-  width: calc(100% - 40px);
+  width: 100%;
+  margin: 0;
+  padding: 9px 13px;
+
+  @media (min-width: $tablet-width) {
+    height: 174px;
+    padding: 9px 17px;
+    font-size: 1.25em;
+  }
 }
 
 .program__extra-goods {
-  margin-top: 8px;
+  margin-top: 2px;
   padding-top: 0;
   padding-bottom: 19px;
   border-top: 2px solid #68b738;
@@ -261,10 +332,12 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-bottom: 61px;
+    margin-bottom: 41px;
   }
 
   .program__group {
+    grid-row-gap: 12px;
+
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -277,27 +350,34 @@
       grid-column-gap: $gap-desktop;
     }
   }
+}
 
-  .program__legend {
-    @media (min-width: $tablet-width) {
-      margin-bottom: 57px;
-    }
+.program__extra-goods .program__legend {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 49px;
   }
 }
 
 .program__button {
-  margin-top: 8px;
+  margin-top: 16px;
   margin-bottom: 21px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1em;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: 1.25em;
     line-height: 1;
   }
 }
 
 .program__form-legend {
-  padding-bottom: 32px;
+  padding-bottom: 31px;
   display: block;
   font-family: $basic-font;
   font-size: 0.875em;

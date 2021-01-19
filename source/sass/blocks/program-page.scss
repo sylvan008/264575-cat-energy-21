@@ -16,6 +16,33 @@
       grid-column-gap: 60px;
       align-content: center;
     }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 569px 1fr;
+      grid-column-gap: 81px;
+    }
+  }
+}
+
+.program-page__title {
+  margin-top: 25px;
+  margin-bottom: 37px;
+  font-family: $title-font;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 2.25rem;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 44px;
+    margin-bottom: 55px;
+    padding-left: 40px;
+    font-size: 3.75rem;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 52px;
+    margin-bottom: 58px;
+    padding-left: 0;
   }
 }
 
@@ -29,12 +56,18 @@
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
     padding-left: 40px;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 }
 
 .program-page__form {
   margin-top: 12px;
 
   @media (min-width: $tablet-width) {
+    margin-top: 39px;
     margin-bottom: 72px;
   }
 
