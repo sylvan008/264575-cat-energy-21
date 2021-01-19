@@ -42,7 +42,7 @@
 </header>
 <main class="page-main program-page">
   <div class="program-page__wrapper">
-    <h1 class="page-main__title">Подбор программы</h1>
+    <h1 class="program-page__title">Подбор программы</h1>
     <p class="program-page__description">Заполните анкету, и мы подберем <br> программу питания для вашего кота</p>
   </div>
   <form class="program-page__form program" action="https://echo.htmlacademy.ru">
@@ -59,7 +59,7 @@
             <input class="program-input" type="text" placeholder="7" name="cat_weight" required>
           </label>
           <label class="program__label input-group">
-            Возраст (ЛЕТ)
+            Возраст (ЛЕТ):
             <input class="program-input" type="text" placeholder="7" name="cat_age">
           </label>
         </div>
@@ -86,10 +86,10 @@
       </fieldset>
     </div>
     <fieldset class="program__fieldset program__owner-contacts">
-      <legend class="program__legend program__legend--owner">Контактные данные<br> (владельца кота)</legend>
+      <legend class="program__legend program__legend--owner">Контактные данные (владельца кота)</legend>
       <div class="program__group">
-        <label class="program__label input-group">
-          mail:*
+        <label class="program__label input-group input-group--contacts">
+          E-mail:*
           <span class="program__input-wrapper">
             <input class="program-input" type="email" placeholder="kuklachev@gmail.com" name="owner_email" required>
             <svg class="program-input__icon" width="19" height="14" stroke="#222">
@@ -97,7 +97,7 @@
             </svg>
           </span>
         </label>
-        <label class="program__label input-group">
+        <label class="program__label input-group input-group--contacts">
           Телефон:*
           <span class="program__input-wrapper">
             <input class="program-input" type="tel" placeholder="8 (960) 900-60-90" name="owner_tel" required>
@@ -109,7 +109,7 @@
       </div>
     </fieldset>
     <fieldset class="program__fieldset program__comment">
-      <legend class="program__legend">Комментарий</legend>
+      <legend class="program__legend program__legend--comment">Комментарий</legend>
       <textarea class="program-input program__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
     </fieldset>
     <fieldset class="program__fieldset program__extra-goods">
