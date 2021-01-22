@@ -32,17 +32,17 @@
 }
 
 .show-more__icon-plus {
-   width: 30px;
-   height: 30px;
-   margin-bottom: 23px;
-   justify-self: center;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 23px;
+  justify-self: center;
 
-   @media (min-width: $tablet-width) {
-     width: 60px;
-     height: 60px;
-     margin-bottom: 48px;
-   }
- }
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 48px;
+  }
+}
 
 .show-more__break {
   @media (max-width: $mobile-only-width) {
