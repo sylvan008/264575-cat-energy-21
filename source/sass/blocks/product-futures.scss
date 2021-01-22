@@ -1,5 +1,6 @@
 .product-futures {
   display: grid;
+  align-content: start;
   font-family: $basic-font;
   font-weight: 400;
   font-size: 0.777em;
@@ -7,7 +8,10 @@
   color: $special-dark;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 33px;
+    margin-top: 14px;
+    margin-bottom: 21px;
+    font-size: 1em;
+    line-height: 1;
   }
 
   dt {

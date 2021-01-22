@@ -1,16 +1,36 @@
 .additional-goods {
+  position: relative;
+  padding-top: 44px;
   border-top: 2px solid #68b738;
 
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    margin-left: -$wrapper-padding-tablet;
+    margin-right: -$wrapper-padding-tablet;
+    padding-left: $wrapper-padding-tablet;
+    padding-right: $wrapper-padding-tablet;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-left: -$wrapper-padding-desktop;
+    margin-right: -$wrapper-padding-desktop;
+    padding-left: $wrapper-padding-desktop;
+    padding-right: $wrapper-padding-desktop;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: $gap-desktop;
+  }
+
+  @media (min-width: $desktop-full-width) {
+    margin-left: -$wrapper-padding-desktop-full;
+    margin-right: -$wrapper-padding-desktop-full;
+    padding-left: $wrapper-padding-desktop-full;
+    padding-right: $wrapper-padding-desktop-full;
   }
 }
 
 .additional-goods__title {
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: -0.7em;
   margin-top: 0;
   margin-bottom: 5px;
@@ -24,11 +44,24 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 56px;
     grid-column: 1 / 3;
+    padding-left: 37px;
+    padding-right: 37px;
+    font-size: 2.25em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding-left: 40px;
   }
 }
 
 .additional-goods__list {
   @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 46px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 4;
@@ -40,7 +73,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
   padding-top: 13px;
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-style: solid;
   border-top-width: 0;
   border-left-width: 0;
@@ -61,8 +94,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: $gap-desktop;
+    grid-template-columns: 1fr 1fr 245px;
+    column-gap: 38px;
+    padding-top: 15px;
+    padding-bottom: 14px;
   }
 
   &:first-child {
@@ -72,38 +107,56 @@
 
 .additional-goods__caption {
   margin-top: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   align-self: center;
   font-family: $title-font;
   font-size: 1em;
-  line-height: 1em;
+  line-height: 1;
+  font-weight: 400;
   text-transform: uppercase;
   color: $special-dark-2;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    font-size: 1.25em;
   }
 }
 
 .additional-goods__product-futures {
   margin: 0;
   padding: 0;
+  font-size: 0.87em;
+  align-content: start;
+  line-height: 1;
 
   @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
     justify-self: right;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 1em;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-content: center;
   }
 }
 
 .additional-goods__futures-item {
   padding: 0;
   border-bottom: none;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 3px;
+  }
 }
 
 .additional-goods__button {
   margin-top: 15px;
   font-size: 1em;
   line-height: 1;
-  padding: 10px 0;
+  padding: 12px 0;
 
   @media (max-width: $mobile-only-width) {
     grid-column: 1;
@@ -120,6 +173,7 @@
 
   @media (min-width: $desktop-width) {
     line-height: 1.25;
+    padding: 11px 0;
   }
 }
 
@@ -128,7 +182,7 @@
   height: 289px;
   margin-top: 39px;
   margin-bottom: 0;
-  padding: 43px;
+  padding: 56px 43px 43px 43px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,7 +205,7 @@
     height: 200px;
     margin-top: 69px;
     flex-direction: row;
-    justify-content: space-around;
+    padding: 0 125px 0 78px;
     background-image: url("../img/gift/gift-photo-tablet.jpg");
   }
 
@@ -161,31 +215,36 @@
 
   @media (min-width: $desktop-width) {
     grid-column: 4 / 5;
-    margin-top: 0;
+    margin-top: 47px;
+    padding: 43px 35px;
     background-image: url("../img/gift/gift-photo-desktop.jpg");
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
     background-image: url("../img/gift/gift-photo-desktop-2x.jpg");
   }
+}
 
-  .additional-goods__promo-icon {
-    display: inline-block;
-    width: 78px;
-    height: 80px;
+.additional-goods__promo-icon {
+  display: inline-block;
+  width: 78px;
+  height: 80px;
 
-    @media (min-width: $tablet-width) {
-      width: 80px;
-      height: 83px;
-    }
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 83px;
   }
 
-  span {
-    display: inline-block;
-    max-width: 161px;
+  @media (min-width: $desktop-width) {
+    margin-top: 12px;
+  }
+}
 
-    @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
-      text-align: left;
-    }
+.additional-goods__promo span {
+  display: inline-block;
+  max-width: 161px;
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-only-width) {
+    text-align: left;
   }
 }
